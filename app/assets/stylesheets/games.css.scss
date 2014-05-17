@@ -1,0 +1,388 @@
+@import "functions";
+
+#loadscreen {
+  width: 100%;
+  height: 100%;
+  background: #000 no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  z-index: 1000;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.imgborder {
+  border-width: 9px 9px 8px 9px;
+  -moz-border-image: url(/assets/i/border.gif) 9 9 8 9 round;
+  -webkit-border-image: url(/assets/i/border.gif) 9 9 8 9 round;
+  -o-border-image: url(/assets/i/border.gif) 9 9 8 9 round;
+  border-image: url(/assets/i/border.gif) 9 9 8 9 round;
+  width: 950px;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.game_window {
+  color: #000;
+
+  .interface {
+    width: 100%;
+    height: 100%;
+    background: url(/assets/i/i.gif) no-repeat;
+    background-position: 100% 100%;
+    position: absolute;
+    z-index: 28;
+  }
+
+  .iboard {
+    width: 156px;
+    height: 315px;
+    position: absolute;
+    top: 85px;
+    padding: 0px;
+    z-index: 29;
+  }
+
+  #iboard0 {
+    left: 5px;
+  }
+
+  #iboard1 {
+    left: 790px;
+  }
+
+  #player0_face, #player1_face {
+    width: 130px;
+    height: 142px;
+    position: absolute;
+    top: 451px;
+  }
+
+  #player1_face {
+    left: 820px;
+    @include img_reflect();
+  }
+
+  .circle0, .circle1 {
+    width: 203px;
+    height: 81px;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  .circle0 {
+    background-position: 100% 100%;
+  }
+
+  .circle1 {
+    background-position: 0% 0%;
+  }
+
+  .model, .effect {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+  }
+
+  #cU1 {
+    left: 317px;
+    top: 116px;
+  }
+
+  #cU2 {
+    left: 400px;
+    top: 168px;
+  }
+
+  #cU3 {
+    left: 199px;
+    top: 149px;
+  }
+
+  #cU4 {
+    left: 305px;
+    top: 218px;
+  }
+
+  #cU5 {
+    left: 75px;
+    top: 204px;
+  }
+
+  #cU6 {
+    left: 171px;
+    top: 276px;
+  }
+
+  #cU7 {
+    left: 595px;
+    top: 265px;
+  }
+
+  #cU8 {
+    left: 596px;
+    top: 293px;
+  }
+
+  #cU9 {
+    left: 485px;
+    top: 325px;
+  }
+
+  #cU10 {
+    left: 501px;
+    top: 375px;
+  }
+
+  #cU11 {
+    left: 355px;
+    top: 385px;
+  }
+
+  #cU12 {
+    left: 359px;
+    top: 433px;
+  }
+
+  #U1, #eU1, #efU1 {
+    left: 62px;
+    top: -319px;
+    z-index: 2;
+  }
+
+  #U2, #eU2, #efU2 {
+    left: 145px;
+    top: -267px;
+    z-index: 4;
+  }
+
+  #U3, #eU3, #efU3 {
+    left: -56px;
+    top: -286px;
+    z-index: 3;
+  }
+
+  #U4, #eU4, #efU4 {
+    left: 50px;
+    top: -217px;
+    z-index: 6;
+  }
+
+  #U5, #eU5, #efU5 {
+    left: -180px;
+    top: -231px;
+    z-index: 5;
+  }
+
+  #U6, #eU6, #efU6 {
+    left: -84px;
+    top: -159px;
+    z-index: 8;
+  }
+
+  #U7, #eU7, #efU7 {
+    left: 242px;
+    top: -207px;
+    z-index: 7;
+  }
+
+  #U8, #eU8, #efU8 {
+    left: 341px;
+    top: -142px;
+    z-index: 10;
+  }
+
+  #U9, #eU9, #efU9 {
+    left: 132px;
+    top: -147px;
+    z-index: 9;
+  }
+
+  #U10, #eU10, #efU10 {
+    left: 246px;
+    top: -60px;
+    z-index: 12;
+  }
+
+  #U11, #eU11, #efU11 {
+    left: 2px;
+    top: -87px;
+    z-index: 11;
+  }
+
+  #U12, #eU12, #efU12 {
+    left: 104px;
+    top: -2px;
+    z-index: 13;
+  }
+
+  #MassEffect0 {
+    left: 50px;
+    top: -217px;
+    z-index: 25;
+  }
+
+  #MassEffect1 {
+    left: 132px;
+    top: -147px;
+    z-index: 25;
+  }
+
+  #rightnote, #leftnote {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    top: 515px;
+    text-align: left;
+    padding-top: 5px;
+  }
+
+  #leftnote {
+    left: 170px;
+    padding-left: 7px;
+    text-indent: 5px;
+  }
+
+  #rightnote {
+    left:580px;
+    /*padding-left: 7px;*/
+    /*text-indent: 5px;*/
+  }
+
+  .portrait {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 85px;
+    width: 70px;
+    float: left;
+  }
+
+  .health {
+    padding-top: 3px;
+    height: 19px;
+    width: 78px;
+    float: left;
+    font-weight: bold;
+  }
+
+  #pU1, #pU3, #pU5, #pU7, #pU9, #pU11 {
+    margin-right: 12px;
+  }
+
+  #pU7, #pU8, #pU9, #pU10, #pU11, #pU12 {
+    @include img_reflect();
+  }
+
+  .lessh {
+    background: url(/assets/i/dmg.png) repeat-x 50% 85px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dmgNum {
+    position: absolute;
+    height: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #dnU1, #dnU7 {
+    left: 14px;
+    top: 35px;
+  }
+
+  #dnU2, #dnU8 {
+    left: 96px;
+    top: 35px;
+  }
+
+  #dnU3, #dnU9 {
+    left: 14px;
+    top: 140px;
+  }
+
+  #dnU4, #dnU10 {
+    left: 96px;
+    top: 140px;
+  }
+
+  #dnU5, #dnU11 {
+    left: 14px;
+    top: 245px;
+  }
+
+  #dnU6, #dnU12 {
+    left: 96px;
+    top: 245px;
+  }
+  .defend{
+    position: absolute;
+    background: url(/assets/i/d.gif) no-repeat 50% 50%;
+    height: 17px;
+    width: 16px;
+    display: none;
+  }
+  #defU1, #defU7 {
+    left: 30px;
+    top: 65px;
+  }
+  #defU2, #defU8 {
+    left: 110px;
+    top: 65px;
+  }
+  #defU3, #defU9 {
+    left: 30px;
+    top: 170px;
+  }
+  #defU4, #defU10 {
+    left: 110px;
+    top: 170px;
+  }
+  #defU5, #defU11 {
+    left: 30px;
+    top: 275px;
+  }
+  #defU6, #defU12 {
+    left: 110px;
+    top: 275px;
+  }
+  .active {
+    border: 2px outset yellow;
+  }
+
+  .atrgt {
+    border: 2px outset red;
+    cursor: pointer;
+  }
+
+  .htrgt {
+    border: 2px outset lightblue;
+    cursor: pointer;
+  }
+
+  .strgt {
+    border: 2px outset lightgreen;
+    cursor: pointer;
+  }
+
+/* Buttons */
+  #defend {
+    width: 39px;
+    height: 38px;
+    position: absolute;
+    left: 456px;
+    top: 503px;
+    background: url(/assets/i/defend.gif) no-repeat 50% 50%;
+  }
+
+  #defend:hover {
+    cursor: pointer;
+    background: url(/assets/i/defend_h.gif) no-repeat 50% 50%;
+  }
+}

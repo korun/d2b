@@ -1,0 +1,122 @@
+= form_for @prototype do |f|
+
+  #prototype_form
+
+    =error_messages_for @prototype
+
+    .field
+      = f.label :name
+      .controls= f.text_field :name
+    .field
+      = f.label :race
+      .controls= f.select :race, Prototype::RACES.map{|k, v| [v, k]}
+    .field
+      = f.label :leader
+      .controls= f.check_box :leader
+    .field
+      = f.label :level
+      .controls= f.number_field :level
+    .field
+      = f.label :experience
+      .controls= f.number_field :experience
+    .field
+      = f.label :health
+      .controls= f.number_field :health
+    .field
+      = f.label :armor
+      .controls
+        = f.select :armor, 101.times.map{|i| [i, i]}
+        -#= f.number_field :armor
+        -#%span.gray_tip (0..100)
+    .field
+      = f.label :immune
+      .controls
+        = f.number_field :immune
+        -#= select_tag 'prototype[immune]', resist_options(@prototype.immune), :multiple => true
+    .field
+      = f.label :resist
+      .controls
+        = f.number_field :resist
+        -#= select_tag 'prototype[resist]', resist_options(@prototype.resist), :multiple => true
+
+    %hr
+
+    .field
+      = f.label :twice_attack
+      .controls= f.check_box :twice_attack
+    .field
+      = f.label :attack
+      .controls
+        = f.select :attack, Prototype::ATTACK.map{|k, v| [v, k]}
+        \/
+        -#%br
+        -#= f.select :attack_2, Prototype::ATTACK2.map{|k, v| [v, k]}, {:include_blank => 'Нет'}
+    .field
+      = f.label :attack_2
+      .controls= f.select :attack_2, Prototype::ATTACK2.map{|k, v| [v, k]}, {:include_blank => 'Нет'}
+    .field
+      = f.label :accuracy
+      .controls
+        -#= f.number_field :accuracy
+        = f.select :accuracy,   101.times.map{|i| [i, i]}
+        \/
+        -#= f.number_field :accuracy_2
+        = f.select :accuracy_2, 101.times.map{|i| [i, i]}
+        -#%span.gray_tip (0..100)
+    -#.field
+    -#  = f.label :accuracy_2
+    -#  = f.number_field :accuracy_2
+    .field
+      = f.label :damage
+      .controls
+        = f.number_field :damage
+        \/
+        = f.number_field :damage_2
+        %span.gray_tip (0..300, для лидеров верхний порог - 400)
+    -#.field
+    -#  = f.label :damage_2
+    -#  = f.number_field :damage_2
+    .field
+      = f.label :source
+      .controls
+        = f.select :source,   Prototype::SOURCES.map{|k, v| [v, k]}
+        \/
+        = f.select :source_2, Prototype::SOURCES.map{|k, v| [v, k]}, {:include_blank => 'Нет'}
+    -#.field
+    -#  = f.label :source_2
+    -#  = f.select :source_2, Prototype::SOURCES.map{|k, v| [v, k]}, {:include_blank => 'Нет'}
+    .field
+      = f.label :initiative
+      .controls
+        = f.select :initiative, 101.times.map{|i| [i, i]}
+        -#= f.number_field :initiative
+        -#%span.gray_tip (0..100)
+    .field
+      = f.label :reach
+      .controls= f.select :reach, Prototype::REACH.map{|k, v| [v, k]}
+
+    %hr
+
+    .field
+      = f.label :big
+      .controls= f.check_box :big
+    .field
+      = f.label :delay_a
+      .controls= f.number_field :delay_a, :disabled => true
+    .field
+      = f.label :enroll_cost
+      .controls
+        = f.number_field :enroll_cost
+        %span.gray_tip (золота)
+    .field
+      = f.label :training_cost
+      .controls
+        = f.number_field :training_cost
+        %span.gray_tip (золота за единицу опыта)
+    .field
+      = f.label  :add_num
+      .controls= f.select :add_num, @prototypes.map{|x| [x.name, x.id]}, {:include_blank => 'Нет'}
+  #level_up_form
+    = render 'level_ups/form'
+  .actions.center.clear
+    = f.submit

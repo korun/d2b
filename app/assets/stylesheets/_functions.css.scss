@@ -1,0 +1,21 @@
+@mixin border_radius($val1, $val2, $val3, $val4){
+  border-radius: $val1 $val2 $val3 $val4;
+  -moz-border-radius: $val1 $val2 $val3 $val4;
+  -o-border-radius: $val1 $val2 $val3 $val4;
+  -webkit-border-radius: $val1 $val2 $val3 $val4;
+}
+
+@mixin gradient($pos, $col1, $col2){
+  background: -moz-linear-gradient($pos, $col1 0%, $col2 100%);
+  background: -webkit-linear-gradient($pos, $col1 0%, $col2 100%);
+  background: -o-linear-gradient($pos, $col1 0%, $col2 100%);
+  background: linear-gradient($pos, $col1 0%, $col2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$col1', endColorstr='$col2', GradientType=0);
+}
+
+@mixin img_reflect(){
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0); /* Firefox 3.5+ */
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0); /* Safari 3.1+ и Chrome 2.0+ */
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);   /* Opera 10.5+ */
+  -ms-transform: matrix(-1, 0, 0, 1, 0, 0);  /* IE 9.0 */
+}

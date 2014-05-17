@@ -1,0 +1,42 @@
+%p
+  %b= User.human_attribute_name(:username)
+  -if @user.deleted?
+    = @user.username.split('_', 2)[1]
+    (Удалён)
+  -else
+    = @user.username
+%p
+  %b= User.human_attribute_name(:created_at)
+  = l @user.created_at, :format => :long
+-if @admin
+  -if @user.deleted?
+    %p
+      %b= User.human_attribute_name(:deleted_at)
+      = @user.deleted_at
+  %p
+    %b= User.human_attribute_name(:email)
+    = @user.email
+  %p
+    %b= User.human_attribute_name(:role)
+    = User::ROLES[@user.role]
+-if @user.nev_id.present?
+  %p
+    %b= User.human_attribute_name(:nev_id)
+    = link_to @user.nev_id, "http://nevendaar.com/index/8-#{@user.nev_id}", :target => '_blank'
+%p
+  %b= User.human_attribute_name(:sex)
+  = @user.sex
+
+-unless @user.deleted?
+  -if @admin || current_user.id == @user.id
+    = link_to "Редактировать",  edit_user_path(@user)
+    = link_to "Сменить пароль", edit_password_path(@user)
+-else
+  -if @admin
+    = link_to(@user, :title => "Восстановить", :confirm => "Вы уверены?", :method => :delete) do
+      %img{"alt" => "un_del", "src" => "/assets/add.png"}
+
+-if @all
+  = link_to "Назад", all_users_path
+-else
+  = link_to "Назад", users_path

@@ -1,0 +1,39 @@
+-users = User.not_deleted.order(:id).all.map{|m| [m.username, m.id]}
+-faces = Game::LORD_FACE.map{|k, v| [v, k]}
+= form_for @game do |f|
+
+  =error_messages_for @game
+
+  .field
+    = f.label :map_id
+    .controls= f.select :map_id, [["Случайная", 0]] + Map.order(:id).all.map{|m| [m.name, m.id]}
+  .field
+    = f.label :player1_id
+    .controls
+      = f.select :player1_id, users
+      = f.select :player1_face, faces
+  .field
+    = f.label :player2_id
+    .controls
+      = f.select :player2_id, users
+      = f.select :player2_face, faces
+  -#.field
+  -#  = f.label :player1_face
+  -#  .controls= f.select :player1_face, faces
+  -#.field
+  -#  = f.label :player2_face
+  -#  .controls= f.select :player2_face, faces
+  .field
+    = f.label :rounds
+    .controls= f.select :rounds, 5.times.map{|i| [i + 1, i + 1]}
+  .field
+    = f.label :cost_type
+    .controls= f.select :cost_type, Game::COST_TYPE.map{|k, v| [v, k]}
+  .field
+    = f.label :gold
+    .controls= f.number_field :gold
+  .field
+    = f.label :experience
+    .controls= f.number_field :experience
+  .actions
+    = f.submit

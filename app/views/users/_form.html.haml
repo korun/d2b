@@ -1,0 +1,38 @@
+= form_for @user do |f|
+
+  =error_messages_for @user
+
+  .field
+    = f.label      :username
+    = f.text_field :username
+  .field
+    = f.label       :email
+    = f.email_field :email
+  .field
+    = f.label       :male#, nil, class: 'control-label'
+    %label.radio
+      =f.radio_button :male, 1, checked:  @user.male?
+      Мужской
+    %label.radio
+      =f.radio_button :male, 0, checked: !@user.male?
+      Женский
+  -unless current_page? :action => 'edit'
+    .field
+      = f.label          :password
+      = f.password_field :password
+    .field
+      = f.label          :password_confirmation
+      = f.password_field :password_confirmation
+  -if admin?
+    .field
+      = f.label  :role
+      = f.select :role, User::ROLES.map{|k, v| [v, k]}
+    -if @user.id.present? # поле id будет заполнено только при экшне edit
+      .field
+        = f.label      :deleted_at
+        = f.text_field :deleted_at
+  .field
+    = f.label        :nev_id
+    = f.number_field :nev_id
+  .actions
+    = f.submit

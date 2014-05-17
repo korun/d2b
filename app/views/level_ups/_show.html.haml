@@ -1,0 +1,63 @@
+-# WARNING!!! See prototypes/show.html.haml
+
+.center
+  %h2 Парамерты повышения уровня
+
+.field
+  %label= LevelUp.human_attribute_name(:prev_unit_id)
+  .controls= unit_name @level_up.prev_unit
+.field
+  %label= LevelUp.human_attribute_name(:next_unit_id)
+  .controls= unit_name @level_up.next_unit
+
+.center
+  %h3 Увеличение характеристик до 11 уровня
+.field
+  %label= LevelUp.human_attribute_name(:hp_b)
+  .controls= @level_up.hp_b
+.field
+  %label= LevelUp.human_attribute_name(:armor_b)
+  .controls= @level_up.armor_b
+.field
+  %label= LevelUp.human_attribute_name(:exp_next_b)
+  .controls= @level_up.exp_next_b
+.field
+  %label= LevelUp.human_attribute_name(:acc_b)
+  .controls
+    = @level_up.acc_b
+    -if prototype.attack_2
+      \/
+      = @level_up.acc2_b
+.field
+  %label= LevelUp.human_attribute_name(:dmg_b)
+  .controls
+    = @level_up.dmg_b
+    -if prototype.attack_2 && prototype.damage_2
+      \/
+      = @level_up.dmg2_b
+
+.center
+  %h3 Увеличение характеристик после 11 уровня
+.field
+  %label= LevelUp.human_attribute_name(:hp_a)
+  .controls= @level_up.hp_a
+.field
+  %label= LevelUp.human_attribute_name(:armor_a)
+  .controls= @level_up.armor_a
+.field
+  %label= LevelUp.human_attribute_name(:exp_next_a)
+  .controls= @level_up.exp_next_a
+.field
+  %label= LevelUp.human_attribute_name(:acc_a)
+  .controls
+    = @level_up.acc_a
+    -if prototype.attack_2
+      \/
+      = @level_up.acc2_a
+.field
+  %label= LevelUp.human_attribute_name(:dmg_a)
+  .controls
+    = @level_up.dmg_a
+    -if prototype.attack_2
+      \/
+      = @level_up.dmg2_a

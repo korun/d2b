@@ -1,0 +1,38 @@
+-active_path = "#{@active.race}/#{@active.prototype_id}"
+attack_animation(#{@active.cell_num},#{@active.side},'#{active_path}',#{@active.delay_a});
+-if @targets.present?
+  -target_array = []
+  -health = {}
+  -@targets.each do |t|
+    -@result = @active.hit!(t, @game.units)
+    -if @result
+      -@game.del_init!(t.id) if t.dead?
+      -target_array << {:miss => @result[:miss], :msg => @result[:msg], :dmg => @result[:dmg], :cell => t.cell_num}
+      -health[t.cell_num] = t.health
+  -# display damag number + [hit animation]
+  mass_hit_moment(#{target_array.inspect.gsub(':','').gsub('=>',':').html_safe},#{health.inspect.gsub(':','').gsub('=>',':').html_safe},'#{active_path}',#{@active.side},#{@target.side},#{@active.delay_a});
+
+  -# after second show health
+  mass_attack_finish(#{@target.side},#{@active.delay_a},function(){
+  -# next active unit
+  -@game.shift_init!
+  -@active = @game.active_unit
+  =render :file => '/home/kia84/Rails/d2game/app/views/games/js/active.js.haml'
+  });
+-else
+  -@result = @active.hit!(@target, @game.units)
+  -return("") unless @result
+  -@game.del_init!(@target.id) if @target.dead?
+
+  Units[#{@t_index}].health=#{@target.health};
+
+  -# display damag number + [hit animation]
+  hit_moment(#{@result[:miss]},'#{@result[:msg]}','#{@result[:dmg]}',#{@target.cell_num},'#{active_path}',#{@active.side},#{@target.side},#{@active.delay_a});
+
+  -# after second show health
+  attack_finish(#{@t_index},#{@target.cell_num},#{@target.dead?},#{@target.big ? 1 : 0},#{@target.side},#{@active.delay_a},function(){
+  -# next active unit
+  -@game.shift_init!
+  -@active = @game.active_unit
+  =render :file => '/home/kia84/Rails/d2game/app/views/games/js/active.js.haml'
+  });

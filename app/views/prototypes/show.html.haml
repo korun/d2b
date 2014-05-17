@@ -1,0 +1,95 @@
+%h1 #{@prototype.name} (#{Prototype::RACES[@prototype.race]})
+#prototype_form
+
+  .field
+    %label= Prototype.human_attribute_name(:name)
+    .controls= @prototype.name + (@prototype.leader? ? ' (лидер)' : '')
+  .field
+    %label= Prototype.human_attribute_name(:race)
+    .controls= Prototype::RACES[@prototype.race]
+  .field
+    %label= Prototype.human_attribute_name(:level)
+    .controls= @prototype.level
+  .field
+    %label= Prototype.human_attribute_name(:experience)
+    .controls= @prototype.experience
+  .field
+    %label= Prototype.human_attribute_name(:health)
+    .controls= @prototype.health
+  .field
+    %label= Prototype.human_attribute_name(:armor)
+    .controls
+      = @prototype.armor
+  .field
+    %label= Prototype.human_attribute_name(:immune)
+    .controls= decode_resist @prototype.immune
+  .field
+    %label= Prototype.human_attribute_name(:resist)
+    .controls= decode_resist @prototype.resist
+
+  %hr
+
+  .field
+    %label= Prototype.human_attribute_name(:twice_attack)
+    .controls= yes_or_no @prototype.twice_attack
+  .field
+    %label= Prototype.human_attribute_name(:attack)
+    .controls
+      = Prototype::ATTACK[@prototype.attack]
+      -if @prototype.attack_2
+        \/
+        = Prototype::ATTACK2[@prototype.attack_2]
+  .field
+    %label= Prototype.human_attribute_name(:accuracy)
+    .controls
+      = @prototype.accuracy
+      -if @prototype.attack_2
+        \/
+        = @prototype.accuracy_2
+  .field
+    %label= Prototype.human_attribute_name(:damage)
+    .controls
+      = @prototype.damage
+      -if @prototype.attack_2 && @prototype.damage_2
+        \/
+        = @prototype.damage_2
+  .field
+    %label= Prototype.human_attribute_name(:source)
+    .controls
+      = Prototype::SOURCES[@prototype.source]
+      -if @prototype.attack_2
+        \/
+        = Prototype::SOURCES[@prototype.source_2]
+  .field
+    %label= Prototype.human_attribute_name(:initiative)
+    .controls
+      = @prototype.initiative
+  .field
+    %label= Prototype.human_attribute_name(:reach)
+    .controls= Prototype::REACH[@prototype.reach]
+
+  %hr
+
+  .field
+    %label= Prototype.human_attribute_name(:big)
+    .controls= yes_or_no @prototype.big
+  -#.field
+  -#  %label= Prototype.human_attribute_name(:delay_a)
+  -#  .controls= @prototype.delay_a
+  .field
+    %label= Prototype.human_attribute_name(:enroll_cost)
+    .controls
+      = @prototype.enroll_cost
+      %span.gray_tip (золота)
+  .field
+    %label= Prototype.human_attribute_name(:training_cost)
+    .controls
+      = @prototype.training_cost
+      %span.gray_tip (золота за единицу опыта)
+#level_up_form
+  = render 'level_ups/show', prototype: @prototype
+.clear
+
+= link_to 'Edit', edit_prototype_path(@prototype)
+\|
+= link_to 'Back', prototypes_path

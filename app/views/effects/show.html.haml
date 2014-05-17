@@ -1,0 +1,14 @@
+%p
+  %b= Effect.human_attribute_name(:unit)
+  = @effect.unit_id
+%p
+  %b= Effect.human_attribute_name(:e_type)
+  = Effect::EFFECTS[@effect.e_type]
+%p
+  %b= Effect.human_attribute_name(:number)
+  = @effect.number
+%p
+  %b= Effect.human_attribute_name(:time)
+  = @effect.time
+
+= link_to 'Назад', effects_path

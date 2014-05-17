@@ -1,0 +1,15 @@
+set_defend(#{@t_index},#{@active.cell_num},function(){
+-# next active unit
+-@game.shift_init!
+-@active = @game.active_unit
+=render :file => '/home/kia84/Rails/d2game/app/views/games/js/active.js.haml'
+});
+-#$('#defU#{@active.cell_num}').show();
+-#$('#dnU#{@active.cell_num}').html('defend');
+-#$('#lhU#{@active.cell_num}').set_back('i/block.png').css('background-position','50% 0px');
+-#setTimeout(function(){
+-#showhlth(Units[#{@t_index}],#{@active.cell_num});
+-#-@game.shift_init!
+-#-@active = @game.active_unit
+-#=render :file => '/home/kia84/Rails/d2game/app/views/games/js/active.js.haml'
+-#}, 1500);

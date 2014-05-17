@@ -1,0 +1,61 @@
+-# WARNING!!! See prototypes/_form.html.haml
+
+.center
+  %h2 Парамерты повышения уровня
+
+=error_messages_for @level_up
+
+.field
+  = label_tag 'level_up[prev_unit_id]', LevelUp.human_attribute_name(:prev_unit_id)
+  .controls= select_tag 'level_up[prev_unit_id]', options_from_collection_for_select(@prototypes, "id", "name", @level_up.try(:prev_unit_id)), :prompt => 'Нет'
+.field
+  = label_tag 'level_up[next_unit_id]', LevelUp.human_attribute_name(:next_unit_id)
+  .controls= select_tag 'level_up[next_unit_id]', options_from_collection_for_select(@prototypes, "id", "name", @level_up.try(:next_unit_id)), :prompt => 'Нет'
+
+.center
+  %h3 Увеличение характеристик до 11 уровня
+.field
+  = label_tag 'level_up[hp_b]',  LevelUp.human_attribute_name(:hp_b)
+  .controls= number_field_tag 'level_up[hp_b]', @level_up.try(:hp_b)
+.field
+  = label_tag 'level_up[armor_b]',  LevelUp.human_attribute_name(:armor_b)
+  .controls= number_field_tag 'level_up[armor_b]', @level_up.try(:armor_b)
+.field
+  = label_tag 'level_up[exp_next_b]',  LevelUp.human_attribute_name(:exp_next_b)
+  .controls= number_field_tag 'level_up[exp_next_b]', @level_up.try(:exp_next_b)
+.field
+  = label_tag 'level_up[acc_b]', LevelUp.human_attribute_name(:acc_b)
+  .controls
+    = number_field_tag 'level_up[acc_b]',  @level_up.try(:acc_b )
+    \/
+    = number_field_tag 'level_up[acc2_b]', @level_up.try(:acc2_b)
+.field
+  = label_tag 'level_up[dmg_b]', LevelUp.human_attribute_name(:dmg_b)
+  .controls
+    = number_field_tag 'level_up[dmg_b]',  @level_up.try(:dmg_b )
+    \/
+    = number_field_tag 'level_up[dmg2_b]', @level_up.try(:dmg2_b)
+
+.center
+  %h3 Увеличение характеристик после 11 уровня
+.field
+  = label_tag 'level_up[hp_a]',  LevelUp.human_attribute_name(:hp_a)
+  .controls= number_field_tag 'level_up[hp_a]', @level_up.try(:hp_a)
+.field
+  = label_tag 'level_up[armor_a]',  LevelUp.human_attribute_name(:armor_a)
+  .controls= number_field_tag 'level_up[armor_a]', @level_up.try(:armor_a)
+.field
+  = label_tag 'level_up[exp_next_a]',  LevelUp.human_attribute_name(:exp_next_a)
+  .controls= number_field_tag 'level_up[exp_next_a]', @level_up.try(:exp_next_a)
+.field
+  = label_tag 'level_up[acc_a]', LevelUp.human_attribute_name(:acc_a)
+  .controls
+    = number_field_tag 'level_up[acc_a]',  @level_up.try(:acc_a )
+    \/
+    = number_field_tag 'level_up[acc2_a]', @level_up.try(:acc2_a)
+.field
+  = label_tag 'level_up[dmg_a]', LevelUp.human_attribute_name(:dmg_a)
+  .controls
+    = number_field_tag 'level_up[dmg_a]',  @level_up.try(:dmg_a )
+    \/
+    = number_field_tag 'level_up[dmg2_a]', @level_up.try(:dmg2_a)

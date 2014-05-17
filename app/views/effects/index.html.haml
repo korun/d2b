@@ -1,0 +1,16 @@
+%h1 Эффекты
+
+%table
+  %tr
+    %th= Effect.human_attribute_name(:unit)
+    %th= Effect.human_attribute_name(:e_type)
+    %th= Effect.human_attribute_name(:number)
+    %th= Effect.human_attribute_name(:time)
+
+  - @effects.each do |effect|
+    %tr
+      %td= link_to effect.unit_id, effect
+      %td= Effect::EFFECTS[effect.e_type]
+      %td= effect.number
+      %td= effect.time
+%br

@@ -1,0 +1,8 @@
+%h1 Забыли пароль?
+%p На указанный почтовый ящик будут высланы инструкции по смене пароля.
+= form_tag password_resets_path, :method => :post do
+  .field
+    = label_tag :email, User.human_attribute_name(:email)
+    %br
+    = email_field_tag :email
+    = submit_tag "Отправить"

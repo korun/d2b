@@ -1,0 +1,67 @@
+.center
+  .game_window.imgborder{style:"background:url(/assets/maps/#{@game.map_id}.jpg);"}
+    -12.times do |i|
+      =generate_unit_tag(i + 1)
+    #MassEffect0.effect
+    #MassEffect1.effect
+    -#Здесь будет второй слой для карты
+    .interface
+      #iboard0.iboard
+        -[1, 3, 5].each  do |i|
+          =double_gen_portrait(i)
+      #iboard1.iboard
+        -[7, 9, 11].each do |i|
+          =double_gen_portrait(i)
+      #player0_face
+      #player1_face
+      #leftnote
+        %b=@game.player1.username
+        %br
+        %span#infoact0="Нанимает войска..." if !@game.started? && @units.select{|x| x if x.cell_num <  7}.blank?
+      #rightnote
+        %b=@game.player2.username
+        %br
+        %span#infoact1="Нанимает войска..." if !@game.started? && @units.select{|x| x if x.cell_num >= 7}.blank?
+      #defend{title:"Защита"}
+    %script{:type => "text/javascript"} initialize_game(#{@game.id},#{@game.player1_face},#{@game.player2_face});
+-#=link_to "Test", '/games/1/make_action?num=12&&par=2', {'data-remote' => true}
+
+
+-#=@units.inspect
+-#%p#notice= notice
+-#%p
+-#  %b Map:
+-#  = @game.map_id
+-#%p
+-#  %b Player1:
+-#  = @game.player1
+-#%p
+-#  %b Player2:
+-#  = @game.player2
+-#%p
+-#  %b Player1 face:
+-#  = @game.player1_face
+-#%p
+-#  %b Player2 face:
+-#  = @game.player2_face
+-#%p
+-#  %b Rounds:
+-#  = @game.rounds
+-#%p
+-#  %b Scope1:
+-#  = @game.scope1
+-#%p
+-#  %b Scope2:
+-#  = @game.scope2
+-#%p
+-#  %b Cost type:
+-#  = @game.cost_type
+-#%p
+-#  %b Gold:
+-#  = @game.gold
+-#%p
+-#  %b Experience:
+-#  = @game.experience
+-#= link_to 'Edit', edit_game_path(@game)
+-#\|
+-#= link_to 'Back', games_path

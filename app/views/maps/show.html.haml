@@ -1,0 +1,11 @@
+%p
+  %b= Map.human_attribute_name(:name)
+  = @map.name
+%p
+  %b= Map.human_attribute_name(:layer)
+  = @map.layer
+%p
+  -#%img{:alt => @map.name, :src => "maps/#{@map.id}.png"}
+  =image_tag("maps/#{@map.id}.jpg", alt: @map.name)
+
+= link_to "Назад", maps_path

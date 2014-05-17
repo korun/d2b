@@ -1,0 +1,14 @@
+%h1 Карты
+
+%table
+  %tr
+    %th ID
+    %th= Map.human_attribute_name(:name)
+    %th= Map.human_attribute_name(:layer)
+
+  - @maps.each do |map|
+    %tr
+      %td= map.id
+      %td= link_to map.name, map
+      %td= map.layer
+

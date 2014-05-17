@@ -1,0 +1,60 @@
+-# WARNING!!! See games_controller.rb
+-#.center
+  .game_window.imgborder{style:"background:url(/assets/maps/#{@game.map_id}.jpg);"}
+    .interface
+      #iboard0.iboard
+        -[1, 3, 5].each  do |i|
+          =double_gen_portrait(i)
+      #iboard1.iboard
+        -[7, 9, 11].each do |i|
+          =double_gen_portrait(i)
+      #player0_face{style:"background:url(/assets/lord_face/#{@game.player1_face}.gif);"}
+      #player1_face{style:"background:url(/assets/lord_face/#{@game.player2_face}.gif);"}
+      #leftnote
+        %b=@game.player1.username
+        %br
+        %span#infoact0="Нанимает войска..." if @player == 1 || @player == 3
+      #rightnote
+        %b=@game.player2.username
+        %br
+        %span#infoact1="Нанимает войска..." if @player == 2 || @player == 3
+
+%h1 Набор войск
+
+= form_for [@game, Unit.new] do |f|
+
+  -first_unit = @player == 2 ? 7 : 1
+  -last_unit  = @player == 1 ? 6 : 12
+  -prototypes = Prototype.ready.can_enrolled_by(@game.gold).order(:name).all
+  -small_prototypes = prototypes.select{|p| !p.big}
+
+  =error_messages_for(@units)
+
+  =hidden_field_tag 'game_id', @game.id
+
+  .field
+    = label_tag "race_id", Prototype.human_attribute_name(:race)
+    .controls
+      = select_tag("race_id", options_for_select(Prototype::RACES.map{|k, v| [v, k]}), :prompt => 'Все')
+      -if @game.cost_type == 0 || @game.cost_type == 1
+        =Game.human_attribute_name(:gold) + ":"
+        %span#gold_count.gold=@game.gold
+      -if @game.cost_type == 0 || @game.cost_type == 2
+        =Game.human_attribute_name(:experience) + ":"
+        %span.experience=@game.experience
+  -first_unit.upto(last_unit) do |i|
+    .field
+      = label_tag "units[#{i}][prototype_id]", "Юнит #{i}"
+      .controls
+        = select_tag("units[#{i}][prototype_id]", (i.in?([first_unit, first_unit + 1]) ? enroll_units_options((i.in?([1, 8]) ? small_prototypes : prototypes), @units[i.to_s].try(:prototype_id)) : ''), :prompt => 'Нет', :class => 'unit_select')
+        -#= select_tag("units[#{i}][prototype_id]", options_from_collection_for_select((i.in?([1, 3, 5, 8, 10, 12]) ? small_prototypes : prototypes), :id, :name, @units[i.to_s].try(:prototype_id)), :prompt => 'Нет')
+        -#= number_field_tag "units[#{i}][prototype_id]"
+        = Prototype.human_attribute_name(:level)
+        %button{:disabled => true} -
+        = number_field_tag "units[#{i}][level]", '1', :disabled => true
+        %button{:disabled => true} +
+
+  =f.submit "Готово", :confirm => 'Вы уверены? Ваш выбор нельзя будет изменить.'
+
+%script{:type => "text/javascript"}
+  make_unit_select(#{@game.gold}, #{@game.experience});

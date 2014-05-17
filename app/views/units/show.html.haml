@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b Prototype:
+  = @unit.prototype
+%p
+  %b Health:
+  = @unit.health
+%p
+  %b Accuracy:
+  = @unit.accuracy
+%p
+  %b Accuracy 2:
+  = @unit.accuracy_2
+%p
+  %b Armor:
+  = @unit.armor
+%p
+  %b Level:
+  = @unit.level
+%p
+  %b Damage:
+  = @unit.damage
+%p
+  %b Damage 2:
+  = @unit.damage_2
+%p
+  %b Initiative:
+  = @unit.initiative
+%p
+  %b Resist:
+  = @unit.resist
+%p
+  %b Defend:
+  = @unit.defend
+%p
+  %b Experience:
+  = @unit.experience
+%p
+  %b Health max:
+  = @unit.health_max
+
+-#= link_to 'Edit', edit_unit_path(@unit)
+\|
+-#= link_to 'Back', units_path

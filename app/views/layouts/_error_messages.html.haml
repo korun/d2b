@@ -1,0 +1,21 @@
+-if object.class == Hash || object.class == HashWithIndifferentAccess
+  -errors = []
+  -err_count = 0
+  -object.each do |k, v|
+    -if v.errors.any?
+      -errors << v.errors.full_messages
+      -err_count += 1
+  -if err_count > 0
+    #error_explanation
+      %h2= "При сохранении #{Russian.p(err_count, "произошла #{err_count} ошибка", "произошло #{err_count} ошибки", "произошло #{err_count} ошибок")}:"
+      %ul
+        -errors.each do |full_mes|
+          -full_mes.each do |msg|
+            %li= msg
+-else
+  -if object.errors.any?
+    #error_explanation
+      %h2= "При сохранении #{Russian.p(object.errors.count, "произошла #{object.errors.count} ошибка", "произошло #{object.errors.count} ошибки", "произошло #{object.errors.count} ошибок")}:"
+      %ul
+        -object.errors.full_messages.each do |msg|
+          %li= msg

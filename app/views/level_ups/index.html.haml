@@ -1,0 +1,49 @@
+%h1 Listing level_ups
+
+%table
+  %tr
+    %th Next unit
+    %th Prev unit
+    %th Acc a
+    %th Acc b
+    %th Acc2 a
+    %th Acc2 b
+    %th Armor a
+    %th Armor b
+    %th Dmg a
+    %th Dmg b
+    %th Dmg2 a
+    %th Dmg2 b
+    %th Exp next a
+    %th Exp next b
+    %th Hp a
+    %th Hp b
+    %th
+    %th
+    %th
+
+  - @level_ups.each do |level_up|
+    %tr
+      %td= level_up.next_unit
+      %td= level_up.prev_unit
+      %td= level_up.acc_a
+      %td= level_up.acc_b
+      %td= level_up.acc2_a
+      %td= level_up.acc2_b
+      %td= level_up.armor_a
+      %td= level_up.armor_b
+      %td= level_up.dmg_a
+      %td= level_up.dmg_b
+      %td= level_up.dmg2_a
+      %td= level_up.dmg2_b
+      %td= level_up.exp_next_a
+      %td= level_up.exp_next_b
+      %td= level_up.hp_a
+      %td= level_up.hp_b
+      %td= link_to 'Show', level_up
+      %td= link_to 'Edit', edit_level_up_path(level_up)
+      %td= link_to 'Destroy', level_up, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Level up', new_level_up_path

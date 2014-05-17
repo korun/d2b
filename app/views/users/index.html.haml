@@ -1,0 +1,32 @@
+%h1 Пользователи
+-if admin?
+  %p
+    = link_to "Добавить пользователя", new_user_path
+    -if @all
+      = link_to "Скрывать удалённых",   users_path
+    -else
+      = link_to "Показывать удалённых", all_users_path
+%table
+  %tr
+    %th= User.human_attribute_name(:username  )
+    %th= User.human_attribute_name(:created_at)
+    %th
+  -@users.each do |user|
+    %tr
+      %td{:class => user.deleted? ? 's' : nil}= link_to user.username, user
+      %td= l user.created_at, :format => :long
+      %td
+        -if admin?
+          -unless user.deleted?
+            = link_to(edit_user_path(user), :title => "Редактировать") do
+              %img{"alt" => "edit", "src" => "/assets/edit.png"}
+            = link_to(edit_password_path(user), :title => "Сменить пароль") do
+              %img{"alt" => "key", "src" => "/assets/key.png"}
+            = link_to(user, :title => "Удалить", :confirm => "Вы уверены?", :method => :delete) do
+              %img{"alt" => "del", "src" => "/assets/del.png"}
+          -else
+            = link_to(user, :title => "Восстановить", :confirm => "Вы уверены?", :method => :delete) do
+              %img{"alt" => "un_del", "src" => "/assets/add.png"}
+
+
+=paginate @users

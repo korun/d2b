@@ -1,0 +1,8 @@
+-#See units_controller/create
+-#Set targets
+-border_array = []
+-@game.units.each do |u|
+  -border_array << [u.cell_num, (u.big ? 1 : 0), @active.target_circle_type] if @active.can_hit?(u, @game.units)
+setActiveU(#{@active.cell_num}, #{@active.big ? 1 : 0}, #{border_array.inspect.html_safe});
+-if @dec_step
+  Step--;

@@ -1,0 +1,43 @@
+%h1 Listing units
+
+%table
+  %tr
+    %th Prototype
+    %th Health
+    %th Accuracy
+    %th Accuracy 2
+    %th Armor
+    %th Level
+    %th Damage
+    %th Damage 2
+    %th Initiative
+    %th Resist
+    %th Defend
+    %th Experience
+    %th Health max
+    %th
+    %th
+    %th
+
+  - @units.each do |unit|
+    %tr
+      %td= unit.prototype
+      %td= unit.health
+      %td= unit.accuracy
+      %td= unit.accuracy_2
+      %td= unit.armor
+      %td= unit.level
+      %td= unit.damage
+      %td= unit.damage_2
+      %td= unit.initiative
+      %td= unit.resist
+      %td= unit.defend
+      %td= unit.experience
+      %td= unit.health_max
+      %td= link_to 'Show', [@game, unit]
+      -#%td= link_to 'Edit', edit_unit_path(unit)
+      -#%td= link_to 'Destroy', unit, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+-#= link_to 'New Unit', new_unit_path

@@ -1,0 +1,254 @@
+name	race	level	experience	health	armor	immune	resist	twice_attack	attack	attack_2	accuracy	accuracy_2	damage	damage_2	source	source_2	initiative	reach	big	enroll_cost	training_cost	hp_b	armor_b	exp_next_b	dmg_b	acc_b	dmg2_b	acc2_b	hp_a	armor_a	exp_next_a	dmg_a	acc_a	dmg2_a	acc2_a	leader
+Аббатиса	1	3	1125	100	0	0	0	false	4	8	100	100	40	nil	32	32	10	7	false	700	6	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Ангел	1	4	1600	225	0	0	0	false	1	nil	80	nil	125	nil	128	nil	50	4	false	1800	7	25	0	0	13	1	0	0	10	0	0	6	0	0	0	false
+Архангел	1	1	100	100	0	0	0	false	4	nil	100	nil	40	nil	32	nil	10	5	false	300	4	10	0	350	5	1	0	0	5	0	0	3	0	0	0	true
+Архимаг	1	1	150	65	0	0	0	false	1	nil	80	nil	30	nil	1	nil	40	7	false	500	4	10	0	500	5	1	0	0	5	0	0	3	0	0	0	true
+Ассасин	1	3	1100	135	0	0	0	false	1	256	85	75	60	20	128	16	60	5	false	400	5	15	0	0	6	1	0	0	5	0	0	3	0	0	0	false
+Белый маг	1	4	2100	125	0	0	0	false	1	nil	80	nil	60	nil	1	nil	40	7	false	1310	7	15	0	0	6	1	0	0	5	0	0	3	0	0	0	false
+Великий инквизитор	1	4	800	210	0	64	8	false	1	nil	80	nil	100	nil	128	nil	50	4	false	1800	7	20	0	0	10	1	0	0	10	0	0	5	0	0	0	false
+Волшебник	1	2	550	65	0	0	0	false	1	nil	80	nil	30	nil	1	nil	40	7	false	260	5	5	0	0	3	1	0	0	5	0	0	2	0	0	0	false
+Вор Империи	1	0	95	100	0	0	0	false	1	nil	80	nil	30	nil	128	nil	60	4	false	200	4	10	0	100	5	1	0	0	5	0	0	3	0	0	0	true
+Голем	1	0	2400	150	50	258	0	false	1	nil	80	nil	70	nil	2	nil	70	7	true	6500	4	15	1	0	7	1	0	0	10	0	0	4	0	0	0	false
+Жрец	1	2	475	75	0	0	0	false	4	nil	100	nil	40	nil	32	nil	10	5	false	250	5	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Защитник веры	1	4	1600	175	30	0	0	false	1	nil	80	nil	100	nil	128	nil	50	4	false	1800	7	20	1	0	10	1	0	0	10	0	0	5	0	0	0	false
+Имперский рыцарь	1	3	950	200	0	0	0	false	1	nil	80	nil	75	nil	128	nil	50	4	false	850	6	10	0	500	5	1	0	0	5	0	0	3	0	0	0	false
+Инквизитор	1	3	950	180	0	64	0	false	1	nil	80	nil	75	nil	128	nil	50	4	false	850	6	15	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Лучник	1	1	70	45	0	0	0	false	1	nil	80	nil	25	nil	128	nil	60	5	false	40	4	5	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Маг	1	3	1200	95	0	0	0	false	1	nil	80	nil	45	nil	1	nil	40	7	false	660	6	10	0	0	5	1	0	0	5	0	0	2	0	0	0	false
+Мастер клинка	1	5	2000	250	0	0	0	true	1	nil	80	nil	75	nil	128	nil	50	4	false	3250	7	25	0	0	8	1	0	0	15	0	0	4	0	0	0	false
+Мизраэль	1	0	9000	900	50	512	0	false	1	nil	95	nil	250	nil	32	nil	90	7	false	9900	4	100	0	0	100	1	0	0	0	0	0	0	0	0	0	false
+Монахиня	1	2	425	75	0	0	0	false	4	nil	100	nil	20	nil	32	nil	10	7	false	250	5	10	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Оживший доспех	1	0	375	175	0	320	0	false	1	nil	80	nil	65	nil	128	nil	55	4	true	1700	4	20	0	0	7	1	0	0	10	0	0	3	0	0	0	false
+Охотник на ведьм	1	2	475	140	0	64	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	300	5	15	0	0	5	1	0	0	5	0	0	3	0	0	0	false
+Паладин	1	5	2100	225	30	0	0	false	1	nil	80	nil	125	nil	128	nil	70	4	false	3250	7	25	1	0	13	1	0	0	10	0	0	6	0	0	0	false
+Патриарх	1	4	2000	125	0	0	0	false	4	7	100	100	120	50	32	32	10	5	false	1300	7	15	0	0	12	1	0	0	5	0	0	4	0	0	0	false
+Повелитель стихий	1	3	1500	95	0	0	1	false	14	nil	100	nil	0	nil	1	nil	40	5	false	1060	5	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Послушница	1	1	80	50	0	0	0	false	4	nil	100	nil	20	nil	32	nil	10	5	false	50	4	5	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Прорицательница	1	4	2050	125	0	0	0	false	4	8	100	100	70	nil	32	32	10	7	false	1300	7	15	0	0	7	1	0	0	5	0	0	0	0	0	0	false
+Рейнджер	1	2	500	90	0	0	0	false	1	nil	85	nil	40	nil	128	nil	60	5	false	240	5	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Рыцарь	1	2	475	150	0	0	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	300	5	15	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Рыцарь на Пегасе	1	1	150	150	0	0	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	500	4	15	0	500	10	1	0	0	10	0	0	5	0	0	0	true
+Священник	1	3	1275	100	0	0	0	false	4	nil	100	nil	80	nil	32	nil	10	5	false	650	6	10	0	0	8	1	0	0	5	0	0	4	0	0	0	false
+Сквайр	1	1	80	100	0	0	0	false	1	nil	80	nil	25	nil	128	nil	50	4	false	50	4	10	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Следопыт	1	1	145	90	0	0	0	false	1	nil	80	nil	40	nil	128	nil	60	5	false	500	4	10	0	450	5	1	0	0	5	0	0	3	0	0	0	true
+Титан	1	1	475	250	0	0	0	false	1	nil	80	nil	60	nil	128	nil	50	4	true	300	4	25	0	0	6	1	0	0	15	0	0	3	0	0	0	false
+Ученик	1	1	75	35	0	0	0	false	1	nil	80	nil	15	nil	1	nil	40	7	false	60	4	5	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Алхимик	2	3	325	120	0	0	0	false	6	nil	100	nil	0	nil	32	nil	10	5	false	700	6	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Арбалетчик	2	2	550	110	0	0	0	false	1	nil	80	nil	40	nil	128	nil	40	5	false	240	5	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Архидруид	2	4	1450	150	0	0	0	false	5	8	100	100	100	nil	32	32	70	5	false	1310	7	15	0	0	0	1	0	0	10	0	0	0	0	0	0	false
+Валькирия	2	0	1550	250	0	0	0	false	1	nil	80	nil	55	nil	4	nil	60	7	false	3600	4	25	0	0	6	1	0	0	15	0	0	3	0	0	0	false
+Ветеран	2	3	1275	250	0	0	0	false	1	nil	80	nil	80	nil	128	nil	40	4	false	850	6	25	0	0	8	1	0	0	15	0	0	4	0	0	0	false
+Витар	2	0	9000	900	50	512	0	false	1	nil	95	nil	250	nil	32	nil	90	7	false	9900	4	100	0	0	100	1	0	0	0	0	0	0	0	0	0	false
+Воин кланов	2	4	600	200	0	0	0	false	1	nil	80	nil	55	nil	128	nil	40	4	false	300	5	10	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Вор Кланов	2	0	120	150	0	0	0	false	1	nil	80	nil	40	nil	128	nil	50	4	false	200	4	10	0	125	5	1	0	0	5	0	0	3	0	0	0	true
+Гном	2	1	130	150	0	0	0	false	1	nil	80	nil	30	nil	128	nil	40	4	false	50	4	15	0	0	3	1	0	0	10	0	0	2	0	0	0	false
+Горец	2	3	1500	225	0	0	0	false	1	nil	80	nil	30	nil	4	nil	40	7	false	850	6	25	0	0	3	1	0	0	10	0	0	2	0	0	0	false
+Горный великан	2	2	1100	310	0	0	0	false	1	nil	80	nil	90	nil	2	nil	30	4	true	500	5	30	0	0	9	1	0	0	15	0	0	5	0	0	0	false
+Друид	2	3	850	120	0	0	0	false	5	8	100	100	75	nil	32	32	70	5	false	660	6	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Дух Фенрира	2	1	1975	275	0	0	0	false	1	nil	80	nil	90	nil	128	nil	65	4	false	2300	7	25	0	0	9	1	0	0	15	0	0	5	0	0	0	false
+Защитник горна	2	3	1100	155	0	0	0	false	1	nil	80	nil	70	nil	128	nil	40	5	false	750	6	15	0	0	7	1	0	0	10	0	0	4	0	0	0	false
+Йети	2	1	700	230	0	0	4	false	1	nil	80	nil	30	nil	4	nil	40	7	true	400	4	90	0	0	25	1	0	0	45	0	0	13	0	0	0	false
+Инженер	2	1	175	135	0	0	0	false	1	nil	80	nil	40	nil	128	nil	50	5	false	500	4	15	0	0	8	1	0	0	10	0	0	4	0	0	0	true
+Каменный предок	2	0	3000	350	0	258	0	false	1	nil	80	nil	150	nil	128	nil	70	4	true	9500	4	35	0	0	15	1	0	0	20	0	0	8	0	0	0	false
+Королевский страж	2	1	225	225	0	0	0	false	1	nil	80	nil	60	nil	128	nil	40	4	false	500	4	15	0	550	10	1	0	0	10	0	0	5	0	0	0	true
+Король гномов	2	5	2500	250	30	0	68	false	1	nil	80	nil	100	nil	128	nil	35	4	false	3250	7	25	1	0	10	1	0	0	15	0	0	5	0	0	0	false
+Ледяной великан	2	3	1950	400	0	4	0	false	1	nil	80	nil	120	nil	4	nil	30	4	true	1300	6	40	0	0	12	1	0	0	20	0	0	6	0	0	0	false
+Мастер рун	2	5	2500	300	0	0	0	true	1	nil	80	nil	65	nil	128	nil	40	4	false	3250	7	30	0	0	7	1	0	0	15	0	0	3	0	0	0	false
+Метатель огня	2	3	1100	130	0	0	8	false	1	nil	80	nil	35	nil	8	nil	40	7	false	740	6	15	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Метатель топоров	2	1	100	65	0	0	0	false	1	nil	80	nil	25	nil	128	nil	40	5	false	40	4	5	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Наместник Вотана	2	4	3500	400	0	0	0	false	1	nil	80	nil	80	nil	1	nil	20	7	true	2800	7	40	0	0	8	1	0	0	20	0	0	4	0	0	0	false
+Отшельник	2	4	1000	250	0	0	0	false	1	14	80	33	55	nil	4	4	40	7	false	1800	7	25	0	0	6	1	0	0	15	0	0	3	0	0	0	false
+Повелитель бурь	2	3	2450	350	0	0	0	false	1	nil	80	nil	50	nil	1	nil	20	7	true	1400	6	35	0	0	5	1	0	0	20	0	0	3	0	0	0	false
+Повелитель волков	2	4	2025	225	0	0	0	false	12	nil	100	nil	0	nil	4	nil	40	5	false	2300	7	25	0	0	4	1	0	0	10	0	0	2	0	0	0	false
+Посвященная	2	2	325	90	0	0	0	false	5	nil	100	nil	50	nil	32	nil	70	5	false	260	5	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Рух	2	0	160	125	0	0	0	false	1	nil	80	nil	40	nil	128	nil	60	4	true	1700	4	15	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Старейшина	2	1	120	150	0	0	0	false	1	nil	80	nil	40	nil	128	nil	30	4	false	300	4	10	0	350	10	1	0	0	5	0	0	5	0	0	0	true
+Старый ветеран	2	4	1750	275	0	0	0	false	1	nil	80	nil	100	nil	128	nil	40	4	false	1800	7	30	0	0	10	1	0	0	15	0	0	5	0	0	0	false
+Сын Имира	2	4	3050	500	0	4	0	false	1	2	80	85	150	30	4	4	50	4	true	2600	7	50	0	0	15	1	0	0	25	0	0	8	0	0	0	false
+Травница	2	1	95	60	0	0	0	false	5	nil	100	nil	25	nil	32	nil	70	5	false	60	4	5	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Ученый	2	1	175	95	0	0	0	false	1	nil	80	nil	30	nil	2	nil	30	7	false	500	4	10	0	550	5	1	0	0	5	0	0	3	0	0	0	true
+Холмовой великан	2	1	400	210	0	0	0	false	1	nil	80	nil	60	nil	2	nil	30	4	true	100	4	20	0	0	6	1	0	0	10	0	0	3	0	0	0	false
+Адепт Орд	3	1	75	45	0	0	0	false	1	nil	80	nil	15	nil	16	nil	40	7	false	60	4	5	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Архилич	3	5	3500	170	0	16	0	false	1	nil	80	nil	90	nil	16	nil	40	7	false	2480	7	15	0	0	9	1	0	0	10	0	0	5	0	0	0	false
+Ашган	3	0	9000	900	50	512	0	false	1	nil	95	nil	250	nil	32	nil	90	7	false	9900	4	100	0	0	100	1	0	0	0	0	0	0	0	0	0	false
+Баньши	3	1	115	100	0	16	0	false	9	nil	70	nil	0	nil	64	nil	20	5	false	300	4	10	0	300	0	1	0	0	5	0	0	0	0	0	0	true
+Вампир	3	4	2300	185	0	16	0	false	2	nil	80	nil	50	nil	16	nil	40	7	false	1420	7	20	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Верховный вампир	3	5	3300	210	0	16	0	false	3	nil	80	nil	60	nil	16	nil	40	7	false	2480	7	20	0	0	6	1	0	0	10	0	0	3	0	0	0	false
+Виверна	3	1	500	225	0	0	0	false	1	nil	80	nil	25	nil	16	nil	35	7	true	100	4	25	0	0	3	1	0	0	10	0	0	1	0	0	0	false
+Воин орд	3	2	95	120	0	0	0	false	1	nil	80	nil	25	nil	128	nil	50	4	false	50	4	25	0	0	10	1	0	0	15	0	0	5	0	0	0	false
+Воин-призрак	3	5	2100	320	0	16	0	false	1	12	80	50	125	nil	128	64	50	4	false	3250	7	30	0	0	13	1	0	0	15	0	0	6	0	0	0	false
+Вор Орд	3	0	95	100	0	0	0	false	1	nil	80	nil	30	nil	128	nil	60	4	false	200	4	10	0	100	5	1	0	0	5	0	0	3	0	0	0	true
+Драколич	3	4	3350	525	0	16	0	false	1	nil	80	nil	75	nil	16	nil	35	7	true	2800	7	55	0	0	8	1	0	0	25	0	0	4	0	0	0	false
+Дракон Рока	3	2	1100	300	0	0	0	false	1	nil	80	nil	40	nil	16	nil	35	7	true	500	5	30	0	0	4	1	0	0	15	0	0	2	0	0	0	false
+Дракон Смерти	3	3	2550	375	0	16	0	false	1	nil	80	nil	55	nil	16	nil	35	7	true	1400	6	40	0	0	6	1	0	0	20	0	0	3	0	0	0	false
+Злой дух	3	3	900	75	0	144	0	false	1	nil	80	nil	60	nil	16	nil	60	5	false	260	6	10	0	0	6	1	0	0	5	0	0	3	0	0	0	false
+Змей ужаса	3	4	3600	450	0	16	0	false	1	256	80	40	65	20	16	16	35	7	true	2800	7	45	0	0	7	1	0	0	25	0	0	3	0	0	0	false
+Зомби	3	2	600	170	0	16	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	300	5	15	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Колдун	3	2	500	75	0	0	0	false	1	nil	80	nil	30	nil	16	nil	40	7	false	260	5	10	0	0	3	1	0	0	5	0	0	2	0	0	0	false
+Королева личей	3	1	165	65	0	16	0	false	1	nil	80	nil	30	nil	8	nil	40	7	false	500	4	10	0	500	5	1	0	0	5	0	0	3	0	0	0	true
+Кошмар	3	0	1225	200	0	16	0	false	1	nil	80	nil	50	nil	16	nil	60	7	false	3600	4	20	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Лич	3	4	2425	140	0	16	0	false	1	nil	80	nil	70	nil	16	nil	40	7	false	1420	7	15	0	0	7	1	0	0	10	0	0	4	0	0	0	false
+Лорд Тьмы	3	3	600	200	0	0	15	false	1	nil	80	nil	75	nil	128	nil	50	4	false	850	6	15	0	0	8	1	0	0	10	0	0	4	0	0	0	false
+Некромант	3	3	1150	105	0	0	16	false	1	nil	80	nil	45	nil	16	nil	40	7	false	660	6	10	0	0	5	1	0	0	5	0	0	2	0	0	0	false
+Носферату	3	1	100	90	0	16	0	false	2	nil	80	nil	10	nil	16	nil	50	7	false	500	4	10	0	450	5	1	0	0	5	0	0	3	0	0	0	true
+Оборотень	3	1	600	100	0	128	0	false	1	nil	80	nil	40	nil	128	nil	50	4	false	1000	4	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Привидение	3	1	75	45	0	16	0	false	9	nil	65	nil	0	nil	64	nil	20	5	false	50	4	5	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Призрак	3	2	700	90	0	16	0	false	9	nil	70	nil	0	nil	64	nil	20	5	false	270	5	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Рыцарь Смерти	3	1	165	150	0	16	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	500	4	15	0	500	10	1	0	0	10	0	0	5	0	0	0	true
+Скелет	3	0	140	100	0	16	0	false	1	nil	80	nil	40	nil	128	nil	60	4	false	600	4	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Скелет-воин	3	3	1150	220	0	16	0	false	1	nil	80	nil	75	nil	128	nil	50	4	false	850	6	20	0	0	8	1	0	0	10	0	0	4	0	0	0	false
+Скелет-рыцарь	3	4	1600	270	0	16	0	false	1	nil	80	nil	100	nil	128	nil	50	4	false	1800	7	30	0	0	10	1	0	0	15	0	0	5	0	0	0	false
+Смерть	3	4	900	125	0	144	0	false	1	256	80	50	100	20	16	16	40	5	false	800	7	15	0	0	10	1	0	0	5	0	0	5	0	0	0	false
+Сущий	3	4	900	105	0	144	0	false	1	13	80	80	75	nil	16	16	50	5	false	800	7	10	0	0	8	1	0	0	5	0	0	4	0	0	0	false
+Тамплиер	3	2	600	160	0	0	15	false	1	nil	80	nil	50	nil	128	nil	50	4	false	300	5	15	0	0	5	1	0	0	5	0	0	3	0	0	0	false
+Танатос	3	0	3100	300	0	272	0	false	1	256	80	80	150	40	128	16	70	4	true	9500	4	30	0	0	15	1	0	0	15	0	0	8	0	0	0	false
+Тень	3	3	850	135	0	16	0	false	9	nil	50	nil	0	nil	64	nil	20	7	false	900	6	15	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Хуорн	3	0	350	175	0	0	0	false	1	nil	80	nil	65	nil	128	nil	55	4	true	1700	4	20	0	0	7	1	0	0	10	0	0	3	0	0	0	false
+Адская гончая	4	0	350	125	0	0	0	false	1	nil	80	nil	20	nil	8	nil	60	7	true	600	4	15	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Архидьявол	4	1	150	65	0	0	0	false	1	nil	80	nil	30	nil	8	nil	40	7	false	500	4	10	0	500	5	1	0	0	5	0	0	3	0	0	0	true
+Ашкаэль	4	0	9000	900	50	512	0	false	1	nil	95	nil	250	nil	32	nil	90	7	false	9900	4	100	0	0	100	1	0	0	0	0	0	0	0	0	0	false
+Баронесса	4	1	120	100	0	0	0	false	7	nil	80	nil	0	nil	64	nil	20	5	false	300	4	10	0	300	0	1	0	0	5	0	0	0	0	0	0	true
+Белиарх	4	0	425	200	0	0	0	false	1	nil	80	nil	65	nil	128	nil	60	4	true	1700	4	20	0	0	7	1	0	0	10	0	0	3	0	0	0	false
+Берсеркер	4	2	550	170	0	0	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	300	5	15	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Ведьма	4	2	600	75	0	0	0	false	13	nil	80	nil	0	nil	64	nil	20	5	false	260	5	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Владыка	4	5	3875	570	0	0	0	false	1	1	80	70	170	30	128	8	50	4	true	6000	7	55	0	0	17	1	0	0	30	0	0	9	0	0	0	false
+Воин Ада	4	4	1725	270	0	0	0	false	1	nil	80	nil	100	nil	128	nil	50	4	false	1800	7	20	0	0	6	1	0	0	10	0	0	3	0	0	0	false
+Вор Легионов	4	0	95	100	0	0	0	false	1	nil	80	nil	30	nil	128	nil	60	4	false	200	4	10	0	100	5	1	0	0	5	0	0	3	0	0	0	true
+Герцог	4	1	150	150	0	0	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	500	4	15	0	500	10	1	0	0	10	0	0	5	0	0	0	true
+Горгулья	4	1	400	90	40	256	64	false	1	nil	80	nil	40	nil	2	nil	60	5	true	80	4	10	1	0	4	1	0	0	5	0	0	2	0	0	0	false
+Двойник	4	3	500	120	0	0	0	false	11	nil	100	nil	0	nil	64	nil	80	5	false	800	6	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Демон	4	2	850	270	0	0	0	false	1	nil	80	nil	80	nil	128	nil	35	4	true	500	5	30	0	0	8	1	0	0	15	0	0	4	0	0	0	false
+Демонолог	4	3	1325	105	0	0	0	false	1	nil	80	nil	45	nil	8	nil	40	7	false	660	6	10	0	0	5	1	0	0	5	0	0	2	0	0	0	false
+Инкуб	4	4	1125	135	0	0	0	false	8	nil	65	nil	0	nil	2	nil	20	7	false	1310	7	25	0	0	3	1	0	0	10	0	0	2	0	0	0	false
+Колдунья	4	3	1400	115	0	0	0	false	13	nil	80	nil	0	nil	64	nil	20	5	false	660	6	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Модеус	4	5	3100	170	0	0	8	false	1	nil	80	nil	75	nil	8	nil	40	7	false	2260	7	15	0	0	8	1	0	0	10	0	0	4	0	0	0	false
+Молох	4	3	2275	370	0	0	0	false	1	nil	80	nil	110	nil	128	nil	35	4	true	1300	6	40	0	0	11	1	0	0	20	0	0	6	0	0	0	false
+Мраморная горгулья	4	2	1650	150	60	256	64	false	1	nil	80	nil	65	nil	2	nil	60	5	true	480	5	15	1	0	7	1	0	0	10	0	0	3	0	0	0	false
+Мститель	4	0	3200	350	0	0	8	false	1	nil	80	nil	75	nil	8	nil	60	7	true	9500	4	35	0	0	8	1	0	0	20	0	0	4	0	0	0	false
+Одержимый	4	1	95	120	0	0	0	false	1	nil	80	nil	25	nil	128	nil	50	4	false	50	4	10	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Ониксовая горгулья	4	3	2500	170	65	256	64	false	1	nil	80	nil	85	nil	2	nil	60	5	true	1000	6	15	1	0	9	1	0	0	10	0	0	4	0	0	0	false
+Пандемониус	4	4	2250	135	0	0	0	false	1	nil	80	nil	60	nil	8	nil	40	7	false	1310	7	15	0	0	6	1	0	0	5	0	0	3	0	0	0	false
+Повелитель Ада	4	5	3600	600	0	0	0	false	1	10	80	50	140	nil	128	64	40	4	true	6000	7	60	0	0	15	1	0	0	30	0	0	8	0	0	0	false
+Повелитель демонов	4	4	2650	470	0	0	0	false	1	nil	80	nil	140	nil	128	nil	40	4	true	2600	7	50	0	0	14	1	0	0	25	0	0	7	0	0	0	false
+Сатир	4	1	475	250	0	0	0	false	1	256	80	40	60	15	128	16	50	4	true	300	4	25	0	0	6	1	0	0	15	0	0	3	0	0	0	false
+Сектант	4	1	75	45	0	0	0	false	1	nil	80	nil	15	nil	8	nil	40	7	false	60	4	5	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Советник	4	1	145	90	0	0	0	false	1	nil	80	nil	40	nil	128	nil	60	5	false	500	4	10	0	450	5	1	0	0	5	0	0	3	0	0	0	true
+Суккуб	4	4	1500	145	0	0	0	false	13	nil	40	nil	0	nil	64	nil	20	7	false	1310	7	15	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Тварь	4	4	3100	420	0	0	0	false	1	nil	80	nil	70	nil	128	nil	20	7	true	2800	7	40	0	0	7	1	0	0	20	0	0	4	0	0	0	false
+Темный колдун	4	2	500	75	0	0	0	false	1	nil	80	nil	30	nil	8	nil	40	7	false	260	5	10	0	0	3	1	0	0	5	0	0	2	0	0	0	false
+Тиамат	4	5	5000	495	0	0	0	false	1	15	80	80	100	nil	128	64	20	7	true	5000	7	50	0	0	10	1	0	0	25	0	0	5	0	0	0	false
+Черный паладин	4	3	1050	220	0	0	0	false	1	nil	80	nil	75	nil	128	nil	50	4	false	850	6	20	0	0	8	1	0	0	10	0	0	4	0	0	0	false
+Черт	4	1	275	170	0	0	0	false	1	nil	80	nil	50	nil	128	nil	35	4	true	100	4	20	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Адепт Эльфов	5	1	75	35	0	0	0	false	1	nil	80	nil	15	nil	1	nil	45	7	false	60	4	5	0	0	2	1	0	0	3	0	0	1	0	0	0	false
+Архонт	5	3	1190	85	0	0	0	false	1	nil	80	nil	50	nil	1	nil	45	7	false	660	6	10	0	0	5	1	0	0	5	0	0	3	0	0	0	false
+Бандит	5	3	1010	115	0	0	0	true	1	nil	80	nil	30	nil	128	nil	60	5	false	750	6	11	0	0	8	1	0	0	5	0	0	4	0	0	0	false
+Вердант	5	0	3115	300	0	2	0	false	1	nil	80	nil	85	nil	2	nil	70	7	true	9900	7	30	0	0	9	1	0	0	15	0	0	4	0	0	0	false
+Владыка Небес	5	2	1200	300	0	0	0	false	1	nil	80	nil	100	nil	128	nil	50	4	true	1000	5	45	0	0	15	1	0	0	15	0	0	5	0	0	0	false
+Вор Эльфов	5	0	95	90	0	0	0	false	1	nil	80	nil	30	nil	128	nil	65	4	false	200	4	10	0	100	5	1	0	0	5	0	0	3	0	0	0	true
+Грифон	5	1	415	200	0	0	0	false	1	nil	80	nil	65	nil	128	nil	50	4	true	300	4	20	0	0	7	1	0	0	10	0	0	3	0	0	0	false
+Дриада	5	1	165	55	0	0	0	false	1	nil	80	nil	35	nil	1	nil	45	7	false	500	4	10	0	450	5	1	0	0	5	0	0	3	0	0	0	true
+Женщина Дух	5	1	90	45	0	0	0	false	4	nil	100	nil	25	nil	32	nil	10	5	false	50	4	5	0	0	3	1	0	0	3	0	0	3	0	0	0	false
+Иллюмиэль	5	0	9995	900	50	512	0	false	1	nil	95	nil	250	nil	32	nil	90	7	false	9900	7	20	0	0	8	1	0	0	10	0	0	4	0	0	0	false
+Кентавр Дикарь	5	1	1300	210	0	0	0	false	1	3	80	nil	100	nil	128	nil	35	4	false	850	6	15	0	500	10	1	0	0	8	0	0	5	0	0	0	false
+Кентавр Дикарь	5	3	150	135	0	0	0	false	1	nil	80	nil	50	nil	128	nil	55	4	false	500	4	21	0	0	12	1	0	0	10	0	0	5	0	0	0	false
+Кентавр Копейщик	5	1	145	150	0	0	0	false	1	nil	80	nil	30	nil	128	nil	40	4	false	50	4	15	0	0	3	1	0	0	8	0	0	1	0	0	0	false
+Кентавр Латник	5	2	525	175	20	0	0	false	1	nil	80	nil	50	nil	128	nil	40	4	false	300	5	18	0	0	7	1	0	0	9	0	0	3	0	0	0	false
+Кентавр Странник	5	2	730	175	0	0	0	false	1	nil	80	nil	65	nil	128	nil	40	4	false	300	5	18	0	0	7	1	0	0	9	0	0	4	0	0	0	false
+Лесная Дева	5	3	1300	85	0	0	0	false	4	4	100	100	50	50	32	32	10	5	false	650	6	10	0	0	5	1	0	0	4	0	0	1	0	0	0	false
+Мародер	5	5	2665	170	0	0	0	true	1	nil	80	nil	70	nil	128	nil	60	5	false	3250	7	17	0	0	7	0	0	0	9	0	130	3	0	0	0	false
+Мудрец	5	1	100	80	0	0	0	false	14	nil	100	nil	0	nil	32	nil	40	5	false	350	4	10	0	300	0	1	0	0	5	0	0	0	0	0	0	true
+Оракул	5	2	450	60	0	0	0	false	4	nil	100	nil	40	nil	32	nil	10	5	false	250	5	10	0	0	6	1	0	0	5	0	0	3	0	0	0	false
+Охотник	5	2	490	85	0	0	0	false	1	nil	80	nil	45	nil	128	nil	60	5	false	240	5	10	0	0	5	1	0	0	5	0	0	3	0	0	0	false
+Разбойник	5	4	1500	155	0	0	0	true	1	nil	80	nil	55	nil	128	nil	60	5	false	1800	6	16	0	0	6	0	0	0	8	0	75	3	0	0	0	false
+Разведчик	5	1	95	45	0	0	0	false	1	nil	80	nil	30	nil	128	nil	65	5	false	40	4	5	0	0	3	1	0	0	3	0	0	1	0	0	0	false
+Сильфида	5	4	2470	95	0	0	0	false	4	5	100	100	55	55	32	32	10	7	false	850	7	10	0	0	7	1	0	0	5	0	0	0	0	0	0	false
+Солнечная Танцовщица	5	4	2535	115	0	0	0	false	4	6	100	100	50	50	32	32	10	7	false	850	7	12	0	0	6	1	0	0	6	0	0	3	0	0	0	false
+Стингер	5	3	1300	125	0	0	0	false	1	256	80	90	65	15	128	16	60	5	false	740	6	13	0	0	7	1	0	0	7	0	0	4	0	0	0	false
+Сторож	5	2	475	75	0	0	0	false	1	nil	85	nil	40	nil	1	nil	65	5	false	240	5	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Страж	5	1	170	135	0	0	0	false	1	nil	80	nil	40	nil	128	nil	50	5	false	500	4	10	0	500	5	1	0	0	5	0	0	3	0	0	0	true
+Стражник	5	3	1455	120	0	0	8	false	1	1	85	70	60	15	8	8	70	5	false	740	6	12	0	0	6	1	0	0	6	0	0	3	0	0	0	false
+Тиург	5	3	1240	95	0	0	0	false	1	512	80	80	40	15	1	1	45	7	false	660	6	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Чанелер	5	2	505	60	0	0	0	false	1	nil	80	nil	30	nil	1	nil	45	7	false	260	5	10	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Часовой	5	3	1335	120	0	0	4	false	1	2	85	70	55	20	4	4	70	5	false	740	6	12	0	0	6	1	0	0	6	0	0	3	0	0	0	false
+Энт	5	0	365	175	0	0	0	false	1	nil	80	nil	65	nil	128	nil	55	4	true	9900	5	18	0	0	7	1	0	0	9	0	0	3	0	0	0	false
+Энт Большой	5	0	1360	250	0	0	0	false	1	nil	80	nil	85	nil	128	nil	60	4	true	9900	6	25	0	0	9	1	0	0	13	0	0	4	0	0	0	false
+Энт Малый	5	1	75	80	0	0	0	false	1	nil	80	nil	30	nil	128	nil	50	4	false	9900	4	10	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Астерот	6	1	9900	1020	0	72	0	true	1	nil	80	nil	150	nil	128	nil	50	4	true	7000	5	100	0	0	15	1	0	0	50	0	0	8	0	0	0	true
+Белый медведь	6	1	975	300	0	0	4	false	1	nil	80	nil	80	nil	128	nil	70	4	true	300	5	30	0	0	8	1	0	0	15	0	0	4	0	0	0	false
+Бес	6	1	35	50	0	0	0	false	1	nil	80	nil	20	nil	128	nil	30	4	false	50	5	5	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Бурый медведь	6	1	650	270	0	0	0	false	1	nil	80	nil	60	nil	128	nil	65	4	true	300	5	25	0	0	6	1	0	0	15	0	0	3	0	0	0	false
+Верховный Король Гномов	6	1	4500	400	30	0	0	false	1	nil	80	nil	120	nil	128	nil	50	4	false	4500	5	25	1	0	10	1	0	0	15	0	0	5	0	0	0	true
+Волк	6	1	700	180	0	0	0	false	1	nil	80	nil	55	nil	128	nil	50	4	false	300	5	20	0	0	6	1	0	0	10	0	0	3	0	0	0	false
+Гигантский паук	6	1	2200	420	0	0	0	false	1	11	80	80	130	nil	128	64	35	4	true	1300	5	40	0	0	13	1	0	0	20	0	0	7	0	0	0	false
+Гигантский черный паук	6	1	1775	370	0	0	0	false	1	256	80	90	120	35	128	16	35	4	true	1300	5	35	0	0	12	1	0	0	20	0	0	6	0	0	0	false
+Глиняный голем	6	1	9995	2800	0	64	31	false	1	11	95	60	200	nil	32	64	60	7	true	9950	5	220	0	0	20	1	0	0	110	0	0	10	0	0	0	true
+Граф Фламел Краули	6	1	9995	1000	20	64	8	false	1	256	90	90	175	50	128	16	65	4	false	8000	5	100	1	0	18	1	0	0	50	0	0	9	0	0	0	true
+Гумтик Кровоточащий	6	1	9995	1100	0	64	8	false	1	1	80	50	110	15	128	8	40	7	true	9950	6	110	0	0	11	1	0	0	55	0	1 300	5	0	0	0	true
+Дикий великан	6	1	1250	310	0	0	0	false	1	nil	80	nil	100	nil	128	nil	30	4	true	500	5	30	0	0	10	1	0	0	15	0	0	5	0	0	0	false
+Дрега Зул	6	1	450	200	0	0	16	false	2	256	80	50	65	20	128	16	50	4	false	800	5	20	0	0	7	1	0	0	10	0	0	3	0	0	0	true
+Друлиа'ан	6	1	9995	2000	50	66	0	false	1	2	95	30	175	30	32	4	60	7	false	9950	5	200	1	0	18	1	0	0	100	0	0	9	0	0	0	true
+Дух волка	6	1	2500	200	0	0	0	false	1	nil	90	nil	50	nil	1	nil	40	7	false	1200	4	20	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Королева Эльфов	6	1	9900	800	0	64	0	false	1	nil	95	nil	125	nil	32	nil	60	7	true	5500	5	80	0	0	13	1	0	0	40	0	0	6	0	0	0	true
+Костяной лорд	6	1	2900	400	0	80	0	false	3	nil	80	nil	65	nil	128	nil	50	4	false	3250	5	40	0	0	7	1	0	0	20	0	0	3	0	0	0	true
+Лакхаан	6	1	9995	800	0	64	16	false	1	nil	90	nil	125	nil	32	nil	60	7	false	9000	4	80	0	0	13	1	0	0	40	0	0	6	0	0	0	true
+Маг Хугин	6	1	9900	900	0	0	0	false	1	nil	80	nil	70	nil	1	nil	40	7	false	5000	5	90	0	0	7	1	0	0	45	0	0	4	0	0	0	true
+Магистр-оккультист	6	1	9900	310	0	0	0	false	14	nil	100	nil	0	nil	16	nil	90	7	false	3500	5	30	0	0	0	1	0	0	15	0	0	0	0	0	0	false
+Мантикора	6	1	6850	800	30	0	0	false	1	256	80	90	150	60	128	16	50	4	true	5600	5	80	1	0	15	1	0	0	40	0	0	8	0	0	0	false
+Небирос	6	1	9995	2600	30	64	31	false	1	11	90	60	300	nil	128	64	60	7	true	9950	5	220	1	0	30	1	0	0	110	0	0	15	0	0	0	true
+Некромант Эрхог	6	1	9000	300	0	0	15	false	2	nil	80	nil	60	nil	16	nil	50	7	false	2000	5	30	0	0	6	1	0	0	15	0	0	3	0	0	0	true
+Нидхегг	6	1	9900	2000	0	64	0	true	1	256	90	90	150	50	128	16	50	4	true	6000	5	100	0	0	15	1	0	0	15	0	0	0	0	0	0	true
+Оккультист	6	1	750	75	0	0	0	false	14	nil	100	nil	0	nil	16	nil	40	5	false	260	5	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Принцесса Ятаа Халли	6	1	1600	250	20	0	0	false	1	nil	80	nil	80	nil	128	nil	40	4	false	850	5	25	1	0	8	1	0	0	15	0	0	4	0	0	0	true
+Сэр Аллемон	6	1	9995	800	20	64	0	false	1	512	80	50	300	15	128	128	60	4	false	9950	6	80	0	0	30	1	0	0	40	0	1 300	15	0	0	0	true
+Тварь Галлеана	6	1	9995	2800	0	64	31	false	1	256	95	45	300	60	32	32	60	7	true	9950	5	250	0	0	18	1	0	0	125	0	0	9	0	0	0	true
+Толстый бес	6	1	170	100	0	0	0	false	1	nil	70	nil	30	nil	128	nil	50	4	true	50	5	10	0	0	3	1	0	0	5	0	0	2	0	0	0	false
+Упырь	6	1	300	150	0	16	0	false	1	12	75	80	35	nil	128	64	50	4	false	300	5	15	0	0	4	1	0	0	10	0	0	2	0	0	0	false
+Утер	6	1	2550	300	0	0	0	false	1	11	80	60	80	nil	128	64	50	4	false	1500	5	30	0	0	8	1	0	0	15	0	0	4	0	0	0	true
+Утер-демон	6	1	9900	1500	0	0	95	false	1	12	90	60	150	nil	8	64	65	7	true	9900	5	30	0	0	10	1	0	0	15	0	0	5	0	0	0	true
+Утер-дьяволёнок	6	1	5750	300	0	72	23	false	1	12	90	90	100	nil	8	64	60	5	false	1800	5	150	0	0	15	1	0	0	75	0	0	8	0	0	0	true
+Хьюберт де Лейли	6	1	1950	200	30	0	0	false	1	nil	90	nil	75	nil	128	nil	60	4	false	2950	5	20	1	0	8	1	0	0	10	0	0	4	0	0	0	true
+Элементаль Воздуха	6	1	400	100	0	1	0	false	1	nil	80	nil	30	nil	1	nil	40	5	false	50	5	10	0	0	3	1	0	0	5	0	0	2	0	0	0	false
+Эрхог Темная	6	1	2140	95	0	0	15	false	2	nil	80	nil	45	nil	16	nil	40	7	false	660	5	10	0	0	5	1	0	0	5	0	0	2	0	0	0	true
+Головорез	7	1	250	110	0	0	0	false	1	256	80	80	35	20	128	16	75	4	false	240	5	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Копейщик	7	1	450	140	0	0	0	false	1	nil	80	nil	50	nil	128	nil	50	4	false	300	5	15	0	0	5	1	0	0	5	0	0	3	0	0	0	false
+Крестьянин	7	1	35	40	0	0	0	false	1	nil	75	nil	15	nil	128	nil	30	4	false	30	5	5	0	0	2	1	0	0	2	0	0	1	0	0	0	false
+Ополченец	7	1	75	95	0	0	0	false	1	nil	80	nil	25	nil	128	nil	50	4	false	50	5	10	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Разбойник	7	1	50	65	0	0	0	false	1	nil	80	nil	25	nil	128	nil	65	4	false	40	5	5	0	0	3	1	0	0	3	0	0	1	0	0	0	false
+Владыка небес	8	1	2350	420	0	0	0	false	1	nil	80	nil	140	nil	128	nil	50	4	true	3000	5	40	0	0	14	1	0	0	20	0	0	7	0	0	0	false
+Грифон	8	1	1200	200	0	0	0	false	1	nil	80	nil	95	nil	128	nil	50	4	true	1250	5	20	0	0	10	1	0	0	10	0	0	5	0	0	0	false
+Кентавр	8	1	725	140	0	0	0	false	1	nil	80	nil	40	nil	128	nil	60	5	false	300	5	15	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Кентавр копейщик	8	1	625	165	0	0	0	false	1	nil	80	nil	65	nil	128	nil	55	4	false	300	5	15	0	0	6	1	0	0	10	0	0	3	0	0	0	false
+Лесной эльф	8	1	250	100	0	0	0	false	1	nil	80	nil	40	nil	128	nil	65	4	false	240	5	10	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Повелитель Эльфов	8	1	2850	195	0	0	1	false	1	nil	80	nil	50	nil	1	nil	50	7	false	850	5	20	0	0	5	1	0	0	10	0	0	3	0	0	0	false
+Эльф-оракул	8	1	2200	125	0	0	1	false	4	nil	100	nil	60	nil	32	nil	10	7	false	1300	5	15	0	0	6	1	0	0	5	0	0	0	0	0	0	false
+Эльф-следопыт	8	1	75	45	0	0	0	false	1	nil	80	nil	25	nil	128	nil	65	5	false	40	5	5	0	0	3	1	0	0	5	0	0	1	0	0	0	false
+Гоблин	9	1	50	50	0	0	0	false	1	nil	80	nil	15	nil	128	nil	30	4	false	50	5	5	0	0	2	1	0	0	3	0	0	1	0	0	0	false
+Гоблин-лучник	9	1	75	40	0	0	0	false	1	nil	80	nil	15	nil	128	nil	50	5	false	50	5	5	0	0	2	1	0	0	2	0	0	1	0	0	0	false
+Людоед	9	1	1550	300	0	0	0	false	1	nil	80	nil	130	nil	128	nil	20	4	true	2800	5	30	0	0	13	1	0	0	15	0	0	7	0	0	0	false
+Орк	9	1	700	200	0	0	0	false	1	nil	80	nil	55	nil	128	nil	40	4	false	300	5	20	0	0	6	1	0	0	10	0	0	3	0	0	0	false
+Орк-багатур	9	1	1400	220	20	0	0	false	1	nil	80	nil	80	nil	128	nil	40	4	false	850	5	20	1	0	8	1	0	0	10	0	0	4	0	0	0	false
+Старейшина Гоблинов	9	1	970	165	0	0	8	false	1	nil	80	nil	40	nil	8	nil	40	7	false	650	6	17	0	0	4	1	0	0	8	0	43	2	0	0	0	false
+Тролль	9	1	1675	350	0	0	0	false	1	nil	80	nil	120	nil	128	nil	40	4	true	2800	5	35	0	0	12	1	0	0	20	0	0	6	0	0	0	false
+Хан орков	9	1	3100	295	30	0	0	false	1	nil	80	nil	115	nil	128	nil	55	4	false	1800	5	30	1	0	12	1	0	0	15	0	0	6	0	0	0	false
+Циклоп	9	1	2000	250	0	0	0	false	1	nil	80	nil	100	nil	128	nil	40	5	true	990	6	25	0	0	10	1	0	0	12	0	100	5	0	0	0	false
+Белый дракон	10	1	8700	700	0	1	0	false	1	nil	75	nil	100	nil	1	nil	40	7	true	5000	5	70	0	0	10	1	0	0	35	0	0	5	0	0	0	false
+Зеленый дракон	10	1	4650	600	0	8	0	false	1	nil	75	nil	60	nil	8	nil	40	7	true	4500	5	60	0	0	6	1	0	0	30	0	0	3	0	0	0	false
+Красный дракон	10	1	9900	800	0	8	0	false	1	nil	75	nil	125	nil	8	nil	40	7	true	5500	5	80	0	0	13	1	0	0	40	0	0	6	0	0	0	false
+Синий дракон	10	1	8450	700	0	4	0	false	1	nil	75	nil	100	nil	4	nil	40	7	true	5000	5	70	0	0	10	1	0	0	35	0	0	5	0	0	0	false
+Черный дракон	10	1	9900	800	0	16	0	false	1	nil	75	nil	125	nil	16	nil	40	7	true	5300	5	80	0	0	13	1	0	0	40	0	0	6	0	0	0	false
+Медуза	11	1	725	115	0	0	0	false	8	nil	60	nil	0	nil	2	nil	20	7	false	1310	5	10	0	0	0	1	0	0	5	0	0	0	0	0	0	false
+Человек-ящер	11	1	950	200	0	0	0	false	1	nil	80	nil	75	nil	128	nil	50	4	false	850	5	20	0	0	8	1	0	0	10	0	0	4	0	0	0	false
+Варвар	12	1	1275	250	0	0	0	false	1	nil	80	nil	80	nil	128	nil	40	4	false	850	5	25	0	0	8	1	0	0	15	0	0	4	0	0	0	false
+Вождь варваров	12	1	1750	275	0	0	0	false	1	nil	80	nil	100	nil	128	nil	40	4	false	1800	5	30	0	0	10	1	0	0	15	0	0	5	0	0	0	false
+Траппер	12	1	1535	200	0	0	0	false	1	nil	80	nil	60	nil	128	nil	60	5	false	920	6	20	0	0	6	1	0	0	10	0	76	3	0	0	0	false
+Шаманесса	12	1	1665	165	0	0	0	false	1	7	80	30	30	nil	2	64	40	7	false	1020	6	17	0	0	3	1	0	0	8	0	88	2	0	0	0	false
+Кракен	13	1	1675	350	0	0	0	false	1	nil	80	nil	120	nil	128	nil	40	4	true	1500	5	35	0	0	12	1	0	0	20	0	0	6	0	0	0	false
+Морской змей	13	1	2000	400	0	0	0	false	1	nil	80	nil	125	nil	128	nil	70	4	true	3500	5	40	0	0	13	1	0	0	20	0	0	6	0	0	0	false
+Русалка	13	1	975	75	0	0	0	false	1	9	60	50	20	nil	4	64	20	7	false	1310	5	10	0	0	2	1	0	0	5	0	0	1	0	0	0	false
+Тритон	13	1	350	140	0	0	0	false	1	nil	80	nil	40	nil	128	nil	50	4	false	300	5	15	0	0	4	1	0	0	5	0	0	2	0	0	0	false
+Темный Лакхаан	14	1	9995	2000	0	64	31	false	14	nil	90	nil	0	nil	16	nil	90	7	false	9000	5	120	0	0	0	1	0	0	60	0	0	0	0	0	0	true
+Темный Эльф Гаст	14	1	200	110	0	16	0	false	9	nil	70	nil	0	nil	16	nil	40	5	false	1100	6	11	0	0	0	1	0	0	5	0	10	0	0	0	0	false
+Темный эльф Лиф	14	1	3675	250	0	68	0	false	14	nil	100	nil	0	nil	32	nil	60	7	false	1310	5	25	0	0	0	1	0	0	15	0	0	0	0	0	0	true
+Темный Эльф Мясник	14	1	1330	180	0	16	0	false	1	nil	80	nil	105	nil	128	nil	40	4	false	950	6	18	0	0	11	1	0	0	9	0	62	6	0	0	0	false
+Темный Эльф Потрошитель	14	1	585	130	0	16	0	false	1	nil	85	nil	60	nil	128	nil	60	5	false	650	6	13	0	0	15	1	0	0	7	0	26	8	0	0	0	false
+Темный Эльф Тхурингвэнтиль	14	1	615	100	0	16	0	false	1	nil	80	nil	40	nil	1	nil	40	7	false	900	6	10	0	0	4	1	0	0	5	0	31	2	0	0	0	false

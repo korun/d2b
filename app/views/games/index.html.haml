@@ -1,0 +1,31 @@
+%h1 Listing games
+
+%table.center
+  %tr
+    %th Игра
+    %th Карта
+    %th Раунд
+    %th Счёт
+    %th= Game.human_attribute_name(:cost_type)
+    %th= Game.human_attribute_name(:gold)
+    %th= Game.human_attribute_name(:experience)
+    -#%th
+    -#%th
+
+  - @games.each do |game|
+    %tr
+      %td= link_to (game.player1_id == game.player2_id ? "#{game.player1.username}" : "#{game.player1.username} vs #{game.player2.username}"), game
+      %td= game.map.try(:name) ? game.map.name : game.map_id
+      %td= game.current_round == 0 ? '-' : "#{game.current_round} из #{game.rounds}"
+      %td= game.current_round == 0 ? '-' : "#{game.scope1} : #{game.scope2}"
+      %td= Game::COST_TYPE[game.cost_type]
+      %td= game.gold
+      %td= game.experience
+      -#%td= link_to 'Edit', edit_game_path(game)
+      -#%td= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Game', new_game_path
+
+=paginate @games

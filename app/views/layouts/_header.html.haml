@@ -1,0 +1,14 @@
+#header
+  %ul#menu_list
+    -menu_items.each do |item|
+      -if (item[:admin].blank? || admin?) && (item[:login].blank? || logged_in?)
+        %li{class: controller_name == item[:name].split('/', 2)[0] ? 'active' : nil}=link_to item[:title], '/' + item[:name] #url_for(:controller => item[:name])
+    -if logged_in?
+      %li=link_to current_user.username, current_user
+      %li=link_to "Выход", logout_path
+    -else
+      %li{class: controller_name == 'sessions' ? 'active' : nil}
+        =link_to "Войти", login_path
+      %li{class: controller_name == 'users'    ? 'active' : nil}
+        =link_to "Зарегистрироваться", registration_path
+  .clear
