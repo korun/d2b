@@ -29,6 +29,8 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  # And Factory Girls instead default fixtures
+  gem 'factory_girl_rails', '>= 4.4.1'
 end
 
 # Use HAML for views
