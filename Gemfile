@@ -2,6 +2,10 @@
 
 source 'https://rubygems.org'
 
+#ruby=ruby-2.0.0-p481
+# See https://github.com/wayneeseguin/rvm/issues/2914
+ruby '2.0.0' #, :patchlevel => '481'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
@@ -31,6 +35,16 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   # And Factory Girls instead default fixtures
   gem 'factory_girl_rails', '>= 4.4.1'
+  # gem 'faker'
+  gem 'cucumber-rails',     '>= 1.4.1'
+end
+
+group :test do
+  gem 'capybara', '>= 2.4.1'
+  gem 'database_cleaner', '>= 1.3.0'
+  # gem 'email_spec'
+  # gem 'timecop'
+  gem 'launchy', '>= 2.4.2'
 end
 
 # Use HAML for views
