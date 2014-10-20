@@ -1,0 +1,12 @@
+// For fixed navbar
+body {
+  padding-top: 70px;
+}
+
+// Block with flash[] notices
+.flash_block {
+  // Don't show notices, if it has no content
+  .alert:empty {
+    display: none;
+  }
+}
