@@ -43,16 +43,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'paperclip', '>= 4.2.0'
 
 group :development do
-  # Use SCSS for stylesheets
-  gem 'sass-rails', '~> 4.0.3'
-  # Use CoffeeScript for .js.coffee assets and views
-  gem 'coffee-rails', '~> 4.0.0'
   # Spring speeds up development by keeping your application running in the background.
   # Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
 group :development, :test do
+  # Use SCSS for stylesheets
+  gem 'sass-rails', '~> 4.0.3'
+  # Use CoffeeScript for .js.coffee assets and views
+  gem 'coffee-rails', '~> 4.0.0'
   # Use RSpec for tests
   gem 'rspec-rails', '~> 3.0.0'
   # And Factory Girls instead default fixtures
