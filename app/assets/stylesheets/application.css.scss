@@ -1,0 +1,21 @@
+// This is a manifest file that'll be compiled into application.css, which will
+// include all the files listed below.
+
+// Any CSS and SCSS file within this directory, lib/assets/stylesheets,
+// vendor/assets/stylesheets, or vendor/assets/stylesheets of plugins, if any,
+// can be referenced here using a relative path.
+
+// Change Bootstrap defaults
+//$link-color: red;
+//$brand-primary: #BC094A;
+//$navbar-inverse-bg: #BC094A;
+
+// Import original bootstrap
+@import "bootstrap";
+// We can also include optional bootstrap theme
+//@import "bootstrap/theme";
+
+// Application styles
+@import "layout";
+
+// Specified styles
