@@ -1,9 +1,27 @@
 !!!
 %html
   %head
-    %title Dmp
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    %meta(charset="utf-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title d2b
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    %a.sr-only{href: '#content'} Перейти к содержимому
+    %header.navbar-default.navbar-fixed-top{role: 'banner'}
+      .container
+        -# Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle{'data-target' => '.navbar-ex1-collapse', 'data-toggle' => 'collapse', :type => 'button'}
+            %span.sr-only Переключить меню
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand.active{href: '/'} Home
+        -# Collect the nav links, forms, and other content for toggling
+        %nav.collapse.navbar-collapse.navbar-ex1-collapse{role: 'navigation'}
+          %ul.nav.navbar-nav
+    #content.container
+      = render 'layouts/notices'
+      = yield
