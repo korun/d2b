@@ -39,6 +39,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+# Need imagemagick! `sudo apt-get install imagemagick`
+gem 'paperclip', '>= 4.2.0'
+
 group :development do
   # Use SCSS for stylesheets
   gem 'sass-rails', '~> 4.0.3'
