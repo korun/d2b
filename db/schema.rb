@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20141020104302) do
   enable_extension "plpgsql"
 
   create_table "arenas", force: true do |t|
-    t.string   "name"
+    t.string   "name",                    null: false
     t.string   "background_file_name"
     t.string   "background_content_type"
     t.integer  "background_file_size"
