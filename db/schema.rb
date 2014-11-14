@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(version: 20141020104302) do
     t.string   "background_content_type"
     t.integer  "background_file_size"
     t.datetime "background_updated_at"
+    t.string   "foreground_file_name"
+    t.string   "foreground_content_type"
+    t.integer  "foreground_file_size"
+    t.datetime "foreground_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

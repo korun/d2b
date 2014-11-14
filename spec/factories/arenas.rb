@@ -9,5 +9,9 @@ FactoryGirl.define do
     background_content_type 'image/jpeg'
     background_file_size    2.megabytes
     # background_updated_at
+    foreground_file_name    'test2.png'
+    foreground_content_type 'image/png'
+    foreground_file_size    1000.kilobytes
+    # foreground_updated_at
   end
 end

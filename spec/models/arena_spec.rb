@@ -55,4 +55,33 @@ RSpec.describe Arena, type: :model do
       expect(arena.errors).to have_key(:background)
     end
   end
+  context "attribute 'foreground'" do
+    it 'could be empty' do
+      attrs = {
+          foreground_file_name:    nil,
+          foreground_content_type: nil,
+          foreground_file_size:    nil
+      }
+      arena = FactoryGirl.build(:arena, attrs)
+      expect(arena).to be_valid
+    end
+    it 'should check MIME' do
+      arena = FactoryGirl.build(:arena, foreground_content_type: 'image/tiff')
+      expect(arena).to_not be_valid
+      expect(arena.errors).to have_key(:foreground_content_type)
+      expect(arena.errors).to have_key(:foreground)
+    end
+    it 'should check file name' do
+      arena = FactoryGirl.build(:arena, foreground_file_name: 'test_name.tiff')
+      expect(arena).to_not be_valid
+      expect(arena.errors).to have_key(:foreground_file_name)
+      expect(arena.errors).to have_key(:foreground)
+    end
+    it 'should check file size' do
+      arena = FactoryGirl.build(:arena, foreground_file_size: 2.megabytes)
+      expect(arena).to_not be_valid
+      expect(arena.errors).to have_key(:foreground_file_size)
+      expect(arena.errors).to have_key(:foreground)
+    end
+  end
 end
