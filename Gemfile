@@ -2,10 +2,6 @@
 
 source 'https://rubygems.org'
 
-#ruby=ruby-2.0.0-p481
-# See https://github.com/wayneeseguin/rvm/issues/2914
-ruby '2.0.0' #, :patchlevel => '481'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
