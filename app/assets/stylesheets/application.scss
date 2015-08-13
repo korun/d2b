@@ -11,6 +11,7 @@
 //$navbar-inverse-bg: #BC094A;
 
 // Import original bootstrap
+@import "bootstrap-sprockets";
 @import "bootstrap";
 // We can also include optional bootstrap theme
 //@import "bootstrap/theme";
