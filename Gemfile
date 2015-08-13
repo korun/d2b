@@ -36,7 +36,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # Need imagemagick! `sudo apt-get install imagemagick`
-gem 'paperclip', '>= 4.2.0'
+gem 'paperclip', '~> 4.3'
 
 group :development do
   # Spring speeds up development by keeping your application running in the background.
