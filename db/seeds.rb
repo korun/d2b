@@ -7,3 +7,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+%w[
+empire
+clans
+undead
+legions
+elves
+neutral
+humans
+neutral_elves
+greenskin
+dragons
+marsh_dwellers
+barbarians
+merfolks
+dark_elves
+].each do |code|
+  Race.find_or_create_by code: code
+end
