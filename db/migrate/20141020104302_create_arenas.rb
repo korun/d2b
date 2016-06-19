@@ -1,5 +1,3 @@
-# -*- encoding : utf-8 -*-
-
 class CreateArenas < ActiveRecord::Migration
   def change
     create_table :arenas do |t|

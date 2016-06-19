@@ -1,5 +1,3 @@
-# -*- encoding : utf-8 -*-
-
 class Arena < ActiveRecord::Base
 
   BACKGROUND_CONTENT_TYPES = %w[
