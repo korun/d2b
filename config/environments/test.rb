@@ -37,5 +37,6 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.active_support.test_order = :sorted # or `:random` if you prefer
+  # http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
+  config.active_support.test_order = :random # `sorted` or `:random`
 end
