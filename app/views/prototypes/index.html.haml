@@ -1,0 +1,17 @@
+%h1 Listing prototypes
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @prototypes.each do |prototype|
+    %tr
+      %td= link_to 'Show', prototype
+      %td= link_to 'Edit', edit_prototype_path(prototype)
+      %td= link_to 'Destroy', prototype, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Prototype', new_prototype_path

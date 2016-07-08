@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020104302) do
+ActiveRecord::Schema.define(version: 20160619132131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "arenas", force: true do |t|
+  create_table "arenas", force: :cascade do |t|
     t.string   "name",                    null: false
     t.string   "background_file_name"
     t.string   "background_content_type"
@@ -30,4 +30,60 @@ ActiveRecord::Schema.define(version: 20141020104302) do
     t.datetime "updated_at"
   end
 
+  create_table "battles", force: :cascade do |t|
+    t.json     "initiative", default: [], null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "prototypes", force: :cascade do |t|
+    t.integer  "level",         limit: 2,  default: 1,     null: false
+    t.integer  "experience",    limit: 2,  default: 35,    null: false
+    t.string   "code",          limit: 60, default: "imp", null: false
+    t.boolean  "big",                      default: false, null: false
+    t.boolean  "leader",                   default: false, null: false
+    t.boolean  "twice_attack",             default: false, null: false
+    t.integer  "max_health",    limit: 2,  default: 50,    null: false
+    t.integer  "max_armor",     limit: 2,  default: 0,     null: false
+    t.integer  "immune",        limit: 2,  default: 0,     null: false
+    t.integer  "resist",        limit: 2,  default: 0,     null: false
+    t.integer  "initiative",    limit: 2,  default: 30,    null: false
+    t.integer  "reach",         limit: 2,  default: 4,     null: false
+    t.integer  "attack",        limit: 2,  default: 1,     null: false
+    t.integer  "attack_2",      limit: 2
+    t.integer  "accuracy",      limit: 2,  default: 80,    null: false
+    t.integer  "accuracy_2",    limit: 2
+    t.integer  "damage",        limit: 2,  default: 20,    null: false
+    t.integer  "damage_2",      limit: 2
+    t.integer  "source",        limit: 2,  default: 0,     null: false
+    t.integer  "source_2",      limit: 2
+    t.integer  "frames_count",  limit: 2,  default: 10,    null: false
+    t.integer  "enroll_cost",   limit: 2,  default: 50,    null: false
+    t.integer  "training_cost", limit: 2,  default: 5,     null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+  end
+
+  create_table "units", force: :cascade do |t|
+    t.integer  "prototype_id",                           null: false
+    t.integer  "level",        limit: 2, default: 1,     null: false
+    t.integer  "experience",   limit: 2, default: 35,    null: false
+    t.integer  "health",       limit: 2, default: 50,    null: false
+    t.integer  "health_max",   limit: 2, default: 50,    null: false
+    t.integer  "armor",        limit: 2, default: 0,     null: false
+    t.integer  "resist",       limit: 2, default: 0,     null: false
+    t.integer  "initiative",   limit: 2, default: 30,    null: false
+    t.integer  "accuracy",     limit: 2, default: 80,    null: false
+    t.integer  "accuracy_2",   limit: 2
+    t.integer  "damage",       limit: 2, default: 20,    null: false
+    t.integer  "damage_2",     limit: 2
+    t.boolean  "defend",                 default: false, null: false
+    t.integer  "cell_num",     limit: 2, default: 1,     null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  add_index "units", ["prototype_id"], name: "index_units_on_prototype_id", using: :btree
+
+  add_foreign_key "units", "prototypes"
 end
