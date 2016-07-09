@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :unit do
+    prototype
   end
 end

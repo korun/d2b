@@ -1,6 +1,7 @@
 class CreateUnits < ActiveRecord::Migration
   def change
     create_table :units do |t|
+      t.references :battle, null: false, index: true, foreign_key: true
       t.references :prototype, null: false, index: true, foreign_key: true
 
       t.integer :level,      default: 1,        null: false, limit: 2

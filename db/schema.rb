@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20160619132131) do
     t.string   "foreground_content_type"
     t.integer  "foreground_file_size"
     t.datetime "foreground_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "battles", force: :cascade do |t|
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160619132131) do
   end
 
   create_table "units", force: :cascade do |t|
+    t.integer  "battle_id",                              null: false
     t.integer  "prototype_id",                           null: false
     t.integer  "level",        limit: 2, default: 1,     null: false
     t.integer  "experience",   limit: 2, default: 35,    null: false
@@ -83,7 +84,9 @@ ActiveRecord::Schema.define(version: 20160619132131) do
     t.datetime "updated_at",                             null: false
   end
 
+  add_index "units", ["battle_id"], name: "index_units_on_battle_id", using: :btree
   add_index "units", ["prototype_id"], name: "index_units_on_prototype_id", using: :btree
 
+  add_foreign_key "units", "battles"
   add_foreign_key "units", "prototypes"
 end

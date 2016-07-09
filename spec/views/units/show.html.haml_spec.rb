@@ -5,7 +5,7 @@ RSpec.describe "units/show", :type => :view do
     @unit = assign(:unit, Unit.create!())
   end
 
-  it "renders attributes in <p>" do
+  xit "renders attributes in <p>" do
     render
   end
 end
