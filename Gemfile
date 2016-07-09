@@ -51,7 +51,7 @@ group :development, :test do
   # Use CoffeeScript for .js.coffee assets and views
   gem 'coffee-rails', '~> 4.0.0'
   # Use RSpec for tests
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.4'
   # And Factory Girls instead default fixtures
   gem 'factory_girl_rails', '>= 4.4.1'
   # gem 'faker'
