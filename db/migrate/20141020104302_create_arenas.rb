@@ -4,7 +4,7 @@ class CreateArenas < ActiveRecord::Migration
       t.string :name, :null => false
       t.attachment :background
       t.attachment :foreground
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
