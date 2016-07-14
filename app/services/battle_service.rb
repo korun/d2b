@@ -5,17 +5,19 @@ class BattleService
 
   def defend
     @battle.with_lock do
-      @battle.active_unit.update_attribute(defend: true)
+      active_unit.update_attribute(:defend, true)
       @battle.shift_initiative
       @battle.save!
     end
   end
 
-  def target
-
+  def target(cell_num)
+    active_unit
   end
 
   private
 
-
+  def active_unit
+    @battle.active_unit
+  end
 end

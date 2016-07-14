@@ -62,6 +62,7 @@ group :test do
   gem 'database_cleaner', '>= 1.3.0'
   # gem 'email_spec'
   # gem 'timecop'
+  gem 'fork_break'
   gem 'launchy', '>= 2.4.2'
   gem 'cucumber-rails', '>= 1.4.1', require: false
 end
