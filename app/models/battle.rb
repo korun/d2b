@@ -45,6 +45,10 @@ class Battle < ActiveRecord::Base
     # self.current_step += 1
   end
 
+  def unit_on_cell(cell)
+    self.units.detect { |u| u.on_cell?(cell) }
+  end
+
   private
 
   def create_init

@@ -71,4 +71,14 @@ RSpec.describe Battle, type: :model do
       expect(battle.active_unit.id).to eq(unit_ids.first)
     end
   end
+
+  context 'helpers' do
+    it 'Allow to pick unit on cell' do
+      cell   = Unit::CELLS_RANGE.select(&:odd?).sample
+      battle = FactoryGirl.create(:battle)
+      unit   = battle.add_unit!(FactoryGirl.create(:prototype, big: true), cell)
+      expect(battle.unit_on_cell(cell)).to eq(unit)
+      expect(battle.unit_on_cell(cell + 1)).to eq(unit)
+    end
+  end
 end
