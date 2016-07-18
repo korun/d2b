@@ -26,8 +26,8 @@ class BattleService
   def blocked?(unit)
     first_line = unit.left_side? ? Unit::LEFT_SIDE_FIRST_LINE : Unit::RIGHT_SIDE_FIRST_LINE
     return false if unit.on_first_line?
-    return false if @battle.units.detect { |u| u.alive? && u.on_cell?(*first_line) }.nil?
-    true
+    return true unless @battle.units.detect { |u| u.alive? && u.on_cell?(*first_line) }.nil?
+    false
   end
 
   def can_hit?(target_unit)
@@ -46,9 +46,7 @@ class BattleService
       when Prototype::REACH.key(:warrior) # ближайший вражеский юнит
         attack_side = self.left_side? ? Unit::RIGHT_SIDE.to_a : Unit::LEFT_SIDE.to_a
         return false unless target_unit.on_cell?(*attack_side)
-        if !blocked?(active_unit) && !blocked?(target_unit) && can_melee_reach?(target_unit)
-          return true
-        end
+        return true if can_melee_reach?(target_unit)
         return false
       when Prototype::REACH.key(:archer), Prototype::REACH.key(:mage) # любой (каждый) вражеский юнит
         attack_side = self.left_side? ? Unit::RIGHT_SIDE.to_a : Unit::LEFT_SIDE.to_a
@@ -59,6 +57,7 @@ class BattleService
   end
 
   def can_melee_reach?(target_unit)
+    return false if blocked?(active_unit) || blocked?(target_unit)
     return true if active_unit.on_central_row? || target_unit.on_central_row?
     if (active_unit.on_bottom_row? && target_unit.on_bottom_row?) ||
         (active_unit.on_top_row? && target_unit.on_top_row?)

@@ -47,6 +47,20 @@ RSpec.describe BattleService, type: :service do
       expect(service.send(:blocked?, unit2f)).to eq(false)
     end
 
+    it 'unblock second line if first line dead' do
+      battle  = FactoryGirl.create(:battle)
+      service = BattleService.new(battle)
+      unit1   = battle.add_unit!(FactoryGirl.create(:prototype, big: false), 3)
+      unit2   = battle.add_unit!(FactoryGirl.create(:prototype, big: false), 12)
+      unit1f  = battle.add_unit!(FactoryGirl.create(:prototype, big: false), Unit::LEFT_SIDE_FIRST_LINE.sample)
+      unit2f  = battle.add_unit!(FactoryGirl.create(:prototype, big: false), Unit::RIGHT_SIDE_FIRST_LINE.sample)
+
+      unit1f.update!(health: 0) && unit2f.update!(health: 0)
+      battle.units(true) # Reload
+      expect(service.send(:blocked?, unit1)).to eq(false)
+      expect(service.send(:blocked?, unit2)).to eq(false)
+    end
+
     it 'cannot block big units' do
       battle  = FactoryGirl.create(:battle)
       service = BattleService.new(battle)
@@ -68,31 +82,64 @@ RSpec.describe BattleService, type: :service do
       prototype     = FactoryGirl.create(:prototype, big: false)
       big_prototype = FactoryGirl.create(:prototype, big: true)
       @battle       = FactoryGirl.create(:battle)
-      @fatty3_4     = @battle.add_unit!(big_prototype, 3)
-      @fatty9_10    = @battle.add_unit!(big_prototype, 9)
+      @units        = []
+      @units[3]     = @battle.add_unit!(big_prototype, 3)
+      @units[4]     = @units[3]
+      @units[9]     = @battle.add_unit!(big_prototype, 9)
+      @units[10]    = @units[9]
       Unit::CELLS_RANGE.each do |cell|
-        next if @fatty3_4.on_cell?(cell) || @fatty9_10.on_cell?(cell)
-        instance_variable_set(
-            :"@unit#{cell}",
-            @battle.add_unit!(prototype, cell)
-        )
+        next if @units[3].on_cell?(cell) || @units[9].on_cell?(cell)
+        @units[cell] = @battle.add_unit!(prototype, cell)
       end
       @service = BattleService.new(@battle)
     end
 
     it 'second line cannot melee attack' do
-      run_case = -> do
-        Unit::RIGHT_SIDE.each do |target_cell|
+      run_case = ->(target_side) do
+        target_side.each do |target_cell|
           target = @battle.unit_on_cell(target_cell)
           expect(@service.send(:can_melee_reach?, target)).to eq(false)
         end
       end
-      @battle.initiative[0] = @unit1.id
-      expect(@battle.active_unit).to eq(@unit1)
-      run_case.call
-      @battle.initiative[0] = @unit5.id
-      expect(@battle.active_unit).to eq(@unit5)
-      run_case.call
+      [1, 5, 8, 12].each do |cell|
+        unit = @units[cell]
+        @battle.initiative[0] = unit.id
+        expect(@battle.active_unit).to eq(unit)
+        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE : Unit::LEFT_SIDE)
+      end
+    end
+
+    it 'second line can melee attack if all first line dead' do
+      run_case = ->(target_side) do
+        target_side.each do |target_cell|
+          target = @battle.unit_on_cell(target_cell)
+          expect(@service.send(:can_melee_reach?, target)).to eq(true)
+        end
+      end
+      @battle.transaction do
+        (Unit::LEFT_SIDE_FIRST_LINE + Unit::RIGHT_SIDE_FIRST_LINE).each do |cell|
+          @units[cell].update!(health: 0) # Kill
+        end
+      end
+      @battle.units(true) # Reload
+      [1, 5, 8, 12].each do |cell|
+        unit = @units[cell]
+        @battle.initiative[0] = unit.id
+        expect(@battle.active_unit).to eq(unit)
+        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE : Unit::LEFT_SIDE)
+      end
+    end
+
+    it 'first line units cannot reach second line' do
+    end
+
+    it 'central (big) units can reach any from first line' do
+    end
+
+    it 'first line corner units can reach only 2 closest targets' do
+    end
+
+    it 'first line units can reach second line if first line dead' do
     end
   end
 end
