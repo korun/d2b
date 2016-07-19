@@ -78,6 +78,15 @@ RSpec.describe BattleService, type: :service do
   end
 
   context 'can_melee_reach?' do
+    let(:run_case) do
+      ->(target_side, result) do
+        target_side.each do |target_cell|
+          target = @battle.unit_on_cell(target_cell)
+          expect(@service.send(:can_melee_reach?, target)).to eq(result)
+        end
+      end
+    end
+
     before(:each) do
       prototype     = FactoryGirl.create(:prototype, big: false)
       big_prototype = FactoryGirl.create(:prototype, big: true)
@@ -94,28 +103,16 @@ RSpec.describe BattleService, type: :service do
       @service = BattleService.new(@battle)
     end
 
-    it 'second line cannot melee attack' do
-      run_case = ->(target_side) do
-        target_side.each do |target_cell|
-          target = @battle.unit_on_cell(target_cell)
-          expect(@service.send(:can_melee_reach?, target)).to eq(false)
-        end
-      end
+    it 'blocked second line cannot melee attack' do
       [1, 5, 8, 12].each do |cell|
         unit = @units[cell]
         @battle.initiative[0] = unit.id
         expect(@battle.active_unit).to eq(unit)
-        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE : Unit::LEFT_SIDE)
+        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE : Unit::LEFT_SIDE, false)
       end
     end
 
     it 'second line can melee attack if all first line dead' do
-      run_case = ->(target_side) do
-        target_side.each do |target_cell|
-          target = @battle.unit_on_cell(target_cell)
-          expect(@service.send(:can_melee_reach?, target)).to eq(true)
-        end
-      end
       @battle.transaction do
         (Unit::LEFT_SIDE_FIRST_LINE + Unit::RIGHT_SIDE_FIRST_LINE).each do |cell|
           @units[cell].update!(health: 0) # Kill
@@ -126,20 +123,98 @@ RSpec.describe BattleService, type: :service do
         unit = @units[cell]
         @battle.initiative[0] = unit.id
         expect(@battle.active_unit).to eq(unit)
-        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE : Unit::LEFT_SIDE)
+        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE_FIRST_LINE : Unit::LEFT_SIDE_FIRST_LINE, true)
       end
     end
 
     it 'first line units cannot reach second line' do
+      (Unit::LEFT_SIDE_FIRST_LINE + Unit::RIGHT_SIDE_FIRST_LINE).each do |cell|
+        unit = @units[cell]
+        @battle.initiative[0] = unit.id
+        expect(@battle.active_unit).to eq(unit)
+        run_case.call(unit.left_side? ? [8, 12] : [1, 5], false)
+        run_case.call(unit.left_side? ? [10] : [3], true) # but can attack fat units
+      end
     end
 
     it 'central (big) units can reach any from first line' do
+      [3, 4, 9, 10].each do |cell|
+        unit = @units[cell]
+        @battle.initiative[0] = unit.id
+        expect(@battle.active_unit).to eq(unit)
+        run_case.call(unit.left_side? ? Unit::RIGHT_SIDE_FIRST_LINE : Unit::LEFT_SIDE_FIRST_LINE, true)
+      end
     end
 
     it 'first line corner units can reach only 2 closest targets' do
+      @battle.initiative[0] = @units[2].id
+      run_case.call([7, 9], true)
+      run_case.call([11], false)
+      @battle.initiative[0] = @units[6].id
+      run_case.call([9, 11], true)
+      run_case.call([7], false)
+      @battle.initiative[0] = @units[7].id
+      run_case.call([2, 4], true)
+      run_case.call([6], false)
+      @battle.initiative[0] = @units[11].id
+      run_case.call([4, 6], true)
+      run_case.call([2], false)
+    end
+
+    it 'first line corner units can reach last target after other dead' do
+      @battle.initiative[0] = @units[2].id
+      @units[9].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([11], false)
+      @units[7].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([11], true)
+
+      @battle.units.update_all('health = health_max')
+
+      @battle.initiative[0] = @units[6].id
+      @units[9].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([7], false)
+      @units[11].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([7], true)
+
+      @battle.units.update_all('health = health_max')
+
+      @battle.initiative[0] = @units[7].id
+      @units[4].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([6], false)
+      @units[2].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([6], true)
+
+      @battle.units.update_all('health = health_max')
+
+      @battle.initiative[0] = @units[11].id
+      @units[4].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([2], false)
+      @units[6].update!(health: 0) && @battle.units(true) # Kill && reload
+      run_case.call([2], true)
     end
 
     it 'first line units can reach second line if first line dead' do
+      @battle.transaction do
+        Unit::RIGHT_SIDE_FIRST_LINE.each do |cell|
+          @units[cell].update!(health: 0) # Kill
+        end
+      end
+      @battle.units(true) # Reload
+      Unit::LEFT_SIDE_FIRST_LINE.each do |cell|
+        @battle.initiative[0] = @units[cell].id
+        run_case.call([8, 12], true) # 10 - dead
+      end
+      @battle.units.update_all('health = health_max')
+      @battle.transaction do
+        Unit::LEFT_SIDE_FIRST_LINE.each do |cell|
+          @units[cell].update!(health: 0) # Kill
+        end
+      end
+      @battle.units(true) # Reload
+      Unit::RIGHT_SIDE_FIRST_LINE.each do |cell|
+        @battle.initiative[0] = @units[cell].id
+        run_case.call([1, 5], true) # 3 - dead
+      end
     end
   end
 end
