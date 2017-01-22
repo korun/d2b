@@ -19,6 +19,7 @@ default: &default
   encoding: unicode
   username: rails_d2game
   password: rails_d2game
+  host: localhost
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
