@@ -17,6 +17,12 @@ class BattleService
     raise('Incorrect target') if target.nil? || !can_hit?(target)
   end
 
+  # For testing only
+  def set_active_unit!(unit)
+    @battle.initiative[0] = unit.id
+    @active_unit = @battle.active_unit
+  end
+
   private
 
   def active_unit
@@ -63,10 +69,9 @@ class BattleService
         (active_unit.on_top_row? && target_unit.on_top_row?)
       return true
     end
-    not_covered_by_other_on_line = @battle.units.detect do |u|
+    # Not covered by other line?
+    @battle.units.detect do |u|
       u.alive? && u.cell_num != target_unit.cell_num && u.on_cell?(*target_unit.line)
     end.nil?
-    return true if not_covered_by_other_on_line
-    false
   end
 end

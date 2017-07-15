@@ -95,4 +95,9 @@ class Unit < ActiveRecord::Base
   def on_bottom_row?
     self.on_cell?(*BOTTOM_ROW)
   end
+
+  # For test only
+  def kill!
+    update!(health: 0)
+  end
 end
